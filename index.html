@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7f5">
+  <meta name="description" content="数据库原理与应用专升本随机刷题，支持分章节练习、即时判题和详细解析。">
+  <title>数据库刷题</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <button class="icon-button menu-button" id="menuButton" type="button" aria-label="打开练习设置" aria-expanded="false" aria-controls="sidebar">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">DB</span>
+        <span class="brand-copy">
+          <strong>数据库刷题</strong>
+          <small>专升本随机练习</small>
+        </span>
+      </div>
+      <div class="header-progress" title="累计正确率">
+        <span id="headerSeen">已练 0 题</span>
+        <strong id="headerAccuracy">正确率 —</strong>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <div class="scrim" id="scrim" hidden></div>
+    <aside class="sidebar" id="sidebar" aria-label="练习设置">
+      <div class="sidebar-head">
+        <div>
+          <p class="eyebrow">练习范围</p>
+          <h2>章节</h2>
+        </div>
+        <button class="icon-button close-button" id="closeButton" type="button" aria-label="关闭练习设置">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+
+      <div class="chapter-list" id="chapterList" role="listbox" aria-label="选择章节"></div>
+
+      <div class="setup-section">
+        <label class="field-label" for="typeSelect">题型</label>
+        <select id="typeSelect">
+          <option value="all">全部题型</option>
+          <option value="objective">选择题与判断题</option>
+          <option value="choice">单项与多项选择</option>
+          <option value="judge">判断题</option>
+          <option value="open">简答、编程与设计题</option>
+        </select>
+      </div>
+
+      <div class="setup-section">
+        <span class="field-label">顺序</span>
+        <div class="segmented" id="modeGroup">
+          <button type="button" data-mode="random" class="active">随机</button>
+          <button type="button" data-mode="order">顺序</button>
+        </div>
+      </div>
+
+      <div class="setup-section setup-row">
+        <label class="field-label" for="sizeSelect">本轮题量</label>
+        <select id="sizeSelect">
+          <option value="10">10 题</option>
+          <option value="20">20 题</option>
+          <option value="40">40 题</option>
+          <option value="all">全部</option>
+        </select>
+      </div>
+
+      <button class="button primary full-width" id="startButton" type="button">
+        <i data-lucide="shuffle"></i>
+        <span>开始新一轮</span>
+      </button>
+
+      <div class="sidebar-footer">
+        <div class="mini-stat">
+          <span>累计作答</span>
+          <strong id="sidebarSeen">0</strong>
+        </div>
+        <div class="mini-stat">
+          <span>错题记录</span>
+          <strong id="sidebarWrong">0</strong>
+        </div>
+        <button class="text-button" id="resetButton" type="button">清空练习记录</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section class="practice-view" id="practiceView">
+        <div class="session-bar">
+          <div class="session-meta">
+            <span class="chapter-label" id="chapterLabel">全部章节</span>
+            <span class="session-summary" id="sessionSummary">0 / 0</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <span id="progressBar"></span>
+          </div>
+        </div>
+
+        <article class="question-panel" id="questionPanel">
+          <header class="question-head">
+            <div class="tag-row">
+              <span class="tag" id="chapterTag">第一章</span>
+              <span class="tag type-tag" id="typeTag">单项选择题</span>
+            </div>
+            <span class="question-number" id="questionNumber">1 / 20</span>
+          </header>
+
+          <div class="question-stem" id="questionStem"></div>
+
+          <div class="answer-zone" id="answerZone"></div>
+
+          <section class="explanation" id="explanation" hidden aria-live="polite">
+            <div class="explanation-head">
+              <div>
+                <p class="eyebrow">答案与解析</p>
+                <h2 id="resultTitle">回答正确</h2>
+              </div>
+              <span class="result-mark" id="resultMark"></span>
+            </div>
+            <div class="reference-answer">
+              <span class="field-label">参考答案</span>
+              <div class="markdown" id="referenceAnswer"></div>
+            </div>
+            <div class="explanation-copy">
+              <span class="field-label">详细解析</span>
+              <div class="markdown" id="explanationText"></div>
+            </div>
+          </section>
+          <div class="post-answer-actions" id="postAnswerActions" hidden></div>
+        </article>
+
+        <nav class="question-nav" aria-label="题目导航">
+          <button class="button" id="prevButton" type="button">
+            <i data-lucide="arrow-left"></i>
+            <span>上一题</span>
+          </button>
+          <div class="nav-stats">
+            <span class="dot correct"></span><span id="correctCount">正确 0</span>
+            <span class="dot wrong"></span><span id="wrongCount">错误 0</span>
+          </div>
+          <button class="button primary" id="nextButton" type="button">
+            <span>下一题</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </nav>
+      </section>
+
+      <section class="summary-view" id="summaryView" hidden>
+        <p class="eyebrow">本轮完成</p>
+        <h1 id="summaryTitle">练习结果</h1>
+        <p class="summary-copy" id="summaryCopy"></p>
+        <div class="summary-grid">
+          <div><span>已判分</span><strong id="summaryDone">0</strong></div>
+          <div><span>正确</span><strong id="summaryCorrect">0</strong></div>
+          <div><span>错误</span><strong id="summaryWrong">0</strong></div>
+          <div><span>正确率</span><strong id="summaryRate">—</strong></div>
+        </div>
+        <div class="summary-actions">
+          <button class="button primary" id="againButton" type="button">
+            <i data-lucide="rotate-ccw"></i>
+            <span>再来一轮</span>
+          </button>
+          <button class="button" id="retryWrongButton" type="button">重做本轮错题</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="assets/lucide.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
