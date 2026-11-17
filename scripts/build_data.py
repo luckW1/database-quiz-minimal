@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT.parent / "output" / "docs" / "数据库原理与应用_专升本_分章模拟题库与详解.md"
+SOURCE = ROOT / "source" / "question-bank.md"
 OUTPUT = ROOT / "data.js"
 
 CHAPTER_RE = re.compile(r"^# (第([一二三四五六七八九十]+)章)\s+(.+)$")

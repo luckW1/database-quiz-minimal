@@ -2,6 +2,8 @@
 
 《数据库原理与应用》专升本极简答题网页。
 
+在线访问：<https://luckw1.github.io/database-quiz-minimal/>
+
 ## 功能
 
 - 14 个章节，可单章练习，也可全部章节混合练习。
@@ -30,6 +32,7 @@ styles.css            极简响应式样式
 app.js                练习、判题、统计与本地存储
 data.js               浏览器题库数据
 assets/lucide.min.js  本地图标库
+source/question-bank.md 题库原始 Markdown
 scripts/build_data.py 从 Markdown 题库生成 data.js
 ```
 

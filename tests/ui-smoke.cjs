@@ -78,6 +78,13 @@ let browser;
   await page.waitForTimeout(240);
   await page.screenshot({ path: path.join(screenshots, "mobile-all-chapters.png"), fullPage: true });
 
+  await page.locator("#menuButton").click();
+  await page.locator('button[data-chapter="13"]').click();
+  await page.waitForSelector(".empty-question");
+  assert.match(await page.locator("#chapterTag").textContent(), /第 13 章/);
+  assert.match(await page.locator(".empty-question").textContent(), /当前范围没有题目/);
+  assert.equal(await page.locator("#nextButton").isDisabled(), true);
+
   assert.deepEqual(pageErrors, []);
   await browser.close();
   console.log("UI smoke test passed. Screenshots written to", screenshots);

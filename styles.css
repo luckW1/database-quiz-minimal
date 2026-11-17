@@ -526,6 +526,34 @@ select {
   margin-bottom: 0;
 }
 
+.empty-question {
+  display: grid;
+  justify-items: start;
+  gap: 9px;
+  padding: 28px 26px;
+  border: 1px dashed var(--line-strong);
+  border-radius: 6px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+
+.empty-question strong {
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.empty-question .button {
+  margin-top: 8px;
+}
+
+@media (min-width: 861px) {
+  .empty-question .button {
+    display: none;
+  }
+}
+
 .markdown {
   overflow-wrap: anywhere;
 }

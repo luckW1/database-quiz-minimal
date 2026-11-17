@@ -310,7 +310,11 @@
 
   function renderQuestion() {
     const question = currentQuestion();
-    if (!question || !state.session) return;
+    if (!state.session) return;
+    if (!question) {
+      renderEmptySession();
+      return;
+    }
 
     const result = resultFor(question);
     state.selected = result && Array.isArray(result.selected) ? result.selected.slice() : [];
@@ -336,6 +340,45 @@
     renderPostAnswerActions(question, result);
     renderSessionNav();
     updateLiveSessionStats();
+    refreshIcons();
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
+
+  function renderEmptySession() {
+    const typeLabel = elements.typeSelect.selectedOptions[0]?.textContent || "当前题型";
+    elements.chapterLabel.textContent = state.session.label;
+    elements.sessionSummary.textContent = "0 / 0";
+    elements.progressBar.style.width = "0%";
+    elements.chapterTag.textContent = state.session.label;
+    elements.typeTag.textContent = typeLabel;
+    elements.questionNumber.textContent = "0 / 0";
+    elements.questionStem.innerHTML = "";
+
+    const empty = document.createElement("div");
+    empty.className = "empty-question";
+    const title = document.createElement("strong");
+    title.textContent = "当前范围没有题目";
+    const copy = document.createElement("span");
+    copy.textContent = "这个章节没有符合所选题型的题目，请调整章节或题型后再开始。";
+    const action = document.createElement("button");
+    action.type = "button";
+    action.className = "button";
+    action.textContent = "调整练习范围";
+    action.addEventListener("click", () => {
+      if (window.matchMedia("(max-width: 860px)").matches) openSidebar();
+      else elements.typeSelect.focus();
+    });
+    empty.append(title, copy, action);
+
+    elements.questionStem.appendChild(empty);
+    elements.answerZone.replaceChildren();
+    elements.explanation.hidden = true;
+    elements.postAnswerActions.hidden = true;
+    elements.prevButton.disabled = true;
+    elements.nextButton.disabled = true;
+    elements.nextButton.querySelector("span").textContent = "下一题";
+    elements.correctCount.textContent = "正确 0";
+    elements.wrongCount.textContent = "错误 0";
     refreshIcons();
     window.scrollTo({ top: 0, behavior: "auto" });
   }
@@ -417,7 +460,7 @@
     if (!state.selected.length) return;
 
     const selected = state.selected.slice().sort();
-    const answer = question.answer.slice().sort();
+    const answer = (Array.isArray(question.answer) ? question.answer.slice() : [question.answer]).sort();
     const ok = selected.length === answer.length && selected.every((value, index) => value === answer[index]);
     completeAnswer(question, ok, selected);
   }
@@ -544,6 +587,7 @@
   function renderSessionNav() {
     const session = state.session;
     if (!session) return;
+    elements.nextButton.disabled = false;
     elements.prevButton.disabled = session.index === 0;
     const last = session.index === session.ids.length - 1;
     elements.nextButton.querySelector("span").textContent = last ? "查看结果" : "下一题";
@@ -614,6 +658,7 @@
   }
 
   function openSidebar() {
+    if (!window.matchMedia("(max-width: 860px)").matches) return;
     setSidebar(true);
   }
 
@@ -728,6 +773,13 @@
   });
 
   function init() {
+    window.addEventListener("resize", () => {
+      if (window.matchMedia("(max-width: 860px)").matches) return;
+      elements.sidebar.classList.remove("open");
+      elements.scrim.hidden = true;
+      elements.menuButton.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }, { passive: true });
     renderChapterList();
     syncControls();
     updateGlobalStats();
