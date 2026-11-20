@@ -1,0 +1,250 @@
+{
+  "title": "《数据库原理与应用》考试大纲知识点总结解析映射",
+  "rules": [
+    {
+      "id": "keys",
+      "priority": 100,
+      "chapters": [1, 2, 10],
+      "patterns": ["候选码", "候选键", "主码", "主键", "主属性", "非主属性", "全码", "外码", "外键", "键（"],
+      "explanation": "大纲定义：候选码是能唯一标识一个元组、且不含多余属性的属性组；主码是从候选码中选定的一个，用于唯一标识元组。包含在任何一个候选码中的属性称为主属性，不包含在任何候选码中的属性称为非主属性；全码是所有属性共同构成候选码。外码不是本关系的码，但对应另一个关系的主码。"
+    },
+    {
+      "id": "three-schema",
+      "priority": 100,
+      "chapters": [1, 8],
+      "patterns": ["三级模式", "外模式", "内模式", "存储模式", "概念模式", "两级映像", "逻辑独立性", "物理独立性", "数据独立性"],
+      "explanation": "大纲规定：数据库系统采用三级模式、两级映像结构。外模式是用户能看见和使用的局部逻辑结构，可以有多个；模式是全体数据的整体逻辑结构，只有一个；内模式描述物理存储结构，也只有一个。外模式/模式映像保证逻辑独立性，模式/内模式映像保证物理独立性。"
+    },
+    {
+      "id": "relational-algebra",
+      "priority": 110,
+      "chapters": [1],
+      "patterns": ["关系代数", "选择", "投影", "自然连接", "笛卡尔积", "等值连接", "θ连接", "除运算", "R-(R-S)", "R∩S"],
+      "explanation": "大纲规定：关系代数的运算对象是关系，运算结果仍是关系。选择 σ 在行方向筛选满足条件的元组；投影 π 在列方向选取属性并去掉重复元组；连接从笛卡尔积中选取满足条件的元组。自然连接要求有公共属性，在公共属性上做等值比较并去掉重复的公共属性列。"
+    },
+    {
+      "id": "integrity",
+      "priority": 110,
+      "chapters": [2],
+      "patterns": ["实体完整性", "参照完整性", "用户定义完整性", "完整性约束", "完整性", "主属性", "外码", "外键", "违约", "CASCADE", "SET NULL", "CHECK"],
+      "explanation": "大纲规定：实体完整性要求主码不能取空值且取值唯一，SQL 用 PRIMARY KEY 实现；参照完整性要求外码取空值或等于被参照关系中某个元组的主码值，SQL 用 FOREIGN KEY 实现；用户定义完整性针对具体应用语义，用 NOT NULL、UNIQUE、CHECK、DEFAULT 等实现。实体完整性和参照完整性是关系的两个不变性。"
+    },
+    {
+      "id": "er-conversion",
+      "priority": 100,
+      "chapters": [9, 13],
+      "patterns": ["转换为关系", "关系模式转换", "关系模式", "实体.*转换", "主键.*外键", "外键", "m:n", "M：N", "M:N", "1:n", "1：N", "1:N", "1:1", "1：1", "联系表", "复合主键"],
+      "explanation": "大纲规定：每个实体转换为一个关系模式；1:1 联系可合并到任意一端；1:n 联系不单独建表，把 1 端主码作为外码放入 n 端；m:n 联系必须单独转换为一个关系模式，其属性为两端主码加联系自身属性，主码为两端主码的组合。多值属性也要单独转换为关系模式。"
+    },
+    {
+      "id": "fd-basic",
+      "priority": 125,
+      "chapters": [10],
+      "patterns": ["函数依赖", "X -> Y", "闭包", "决定因素", "→", "1对1"],
+      "explanation": "大纲定义：函数依赖 X→Y 表示在关系 R 中，对于任意两个元组，只要它们在 X 上的值相等，在 Y 上的值也必定相等，即 X 唯一确定 Y。X 称为决定因素。属性闭包 X+ 是从 X 出发，根据函数依赖能够推出的全部属性集合。"
+    },
+    {
+      "id": "partial-transitive",
+      "priority": 124,
+      "chapters": [10],
+      "patterns": ["部分函数依赖", "部分依赖", "传递函数依赖", "传递依赖"],
+      "explanation": "大纲定义：若 X→Y，且 X 的任一真子集都不能决定 Y，则为完全函数依赖；若存在 X 的真子集能决定 Y，则为部分函数依赖。若 X→Y、Y→Z，且 Y 不能决定 X、Z 不属于 Y，则称 Z 传递函数依赖于 X。"
+    },
+    {
+      "id": "anomalies",
+      "priority": 123,
+      "chapters": [10],
+      "patterns": ["插入异常", "删除异常", "更新异常", "操作异常", "数据冗余"],
+      "explanation": "大纲指出：关系模式设计不当会产生数据冗余，并引起插入异常、删除异常和更新异常。规范化的目的就是通过分解关系模式减少冗余，消除这三类操作异常，使数据库逻辑结构更合理。"
+    },
+    {
+      "id": "normal-forms",
+      "priority": 130,
+      "chapters": [10],
+      "patterns": ["1NF", "2NF", "3NF", "BCNF", "范式", "规范化"],
+      "explanation": "大纲规定：1NF 要求每个分量都是不可再分的原子值；2NF 要求满足 1NF，且每个非主属性都完全函数依赖于候选码；3NF 要求满足 2NF，且每个非主属性都不传递依赖于候选码；BCNF 要求满足 3NF，且每个决定因素都包含候选码。范式级别由低到高为 1NF → 2NF → 3NF → BCNF。"
+    },
+    {
+      "id": "decomposition",
+      "priority": 122,
+      "chapters": [10],
+      "patterns": ["无损连接", "保持函数依赖", "模式分解"],
+      "explanation": "大纲规定：无损连接性表示分解后的关系做自然连接能完全恢复原关系，不丢失也不增加元组；保持函数依赖表示原关系模式上的函数依赖集，在分解后的各关系模式上仍然能够被蕴涵。分解为两个子模式时，R₁∩R₂→(R₁−R₂) 或 R₁∩R₂→(R₂−R₁) 是无损连接的判定条件。"
+    },
+    {
+      "id": "view",
+      "priority": 110,
+      "chapters": [7, 14],
+      "patterns": ["视图", "VIEW", "WITH CHECK OPTION"],
+      "explanation": "大纲规定：视图是从一个或几个基本表或视图导出的虚表，数据库中只存放视图定义，不存放对应数据。视图作用是简化操作、支持多角度查看数据、提供一定逻辑独立性、保护机密数据和清晰表达查询。含聚合函数、GROUP BY、DISTINCT、多表连接或派生列的视图通常不可更新，因为无法唯一确定基本表中的一行。"
+    },
+    {
+      "id": "index",
+      "priority": 110,
+      "chapters": [7, 14],
+      "patterns": ["索引", "INDEX", "聚集索引", "非聚集索引", "最左前缀"],
+      "explanation": "大纲规定：索引是加快数据检索速度的数据结构，由索引键和指向数据行的指针组成。聚集索引使数据行的物理存储顺序与索引键顺序一致，一个表最多一个；非聚集索引顺序与数据物理顺序无关，一个表可有多个。索引能加快查询、连接和排序，但会占空间并降低增删改速度；取值重复度高的列通常不适合建索引。"
+    },
+    {
+      "id": "procedure",
+      "priority": 100,
+      "chapters": [11],
+      "patterns": ["存储过程", "PROCEDURE", "OUTPUT", "输出参数", "存储函数", "CREATE FUNCTION"],
+      "explanation": "大纲规定：存储过程是预先编译并存储在数据库服务器中的 T-SQL 语句集合，可显式调用并带输入、输出参数。输出参数定义时加 OUTPUT，赋值用 SELECT @变量=列，调用时也带 OUTPUT；存储过程可提高执行效率、实现模块化复用、增强安全性并减少网络传输。"
+    },
+    {
+      "id": "tsql-variable",
+      "priority": 95,
+      "chapters": [11],
+      "patterns": ["局部变量", "DECLARE @", "@变量"],
+      "explanation": "大纲规定：T-SQL 局部变量以 @ 开头，使用前先 DECLARE 声明，再用 SET 或 SELECT 赋值；SET 一次只能给一个变量赋值，SELECT 可一次给多个变量赋值并可从表中取值。全局变量以 @@ 开头。"
+    },
+    {
+      "id": "cursor",
+      "priority": 110,
+      "chapters": [11],
+      "patterns": ["游标", "CURSOR", "FETCH_STATUS", "FETCH NEXT"],
+      "explanation": "大纲规定：游标是指向结果集某一行的指针，用于逐行处理查询结果。标准步骤是 DECLARE 声明、OPEN 打开、FETCH 提取、WHILE @@FETCH_STATUS=0 循环、CLOSE 关闭、DEALLOCATE 释放；循环体内必须再次 FETCH，否则会造成死循环。游标逐行处理，性能通常低于集合操作。"
+    },
+    {
+      "id": "trigger",
+      "priority": 110,
+      "chapters": [12],
+      "patterns": ["触发器", "TRIGGER", "INSERTED", "DELETED", "NEW", "OLD", "INSTEAD OF", "AFTER"],
+      "explanation": "大纲规定：触发器是特殊的存储过程，不由用户显式调用，而由 INSERT、UPDATE、DELETE 等事件自动触发。SQL Server 的 INSERTED 表保存插入或更新后的新行，DELETED 表保存删除或更新前的旧行。AFTER 触发器在操作成功之后执行，只能定义在表上；INSTEAD OF 触发器替代原操作执行，可用于视图。触发器按集合方式处理多行。"
+    },
+    {
+      "id": "transaction",
+      "priority": 100,
+      "chapters": [1, 14],
+      "patterns": ["事务", "ACID", "原子性", "一致性", "隔离性", "持续性", "并发", "隔离级别", "锁"],
+      "explanation": "大纲规定：事务具有 ACID 特性。原子性表示操作要么全做要么全不做；一致性表示执行前后数据库都处于一致状态；隔离性表示并发事务互不干扰；持续性表示事务提交后结果永久保存。并发控制不当会造成丢失修改、不可重复读和读脏数据。"
+    },
+    {
+      "id": "db-concepts",
+      "priority": 90,
+      "chapters": [1],
+      "patterns": ["数据库管理系统", "DBMS", "数据库系统", "DBS", "数据库管理员", "DBA", "数据库是", "长期存储", "有组织", "可共享"],
+      "explanation": "大纲定义：数据库是长期存储在计算机内、有组织、可共享的大量数据集合；DBMS 是位于用户与操作系统之间的一层数据管理软件，属于系统软件，负责科学地组织和存储数据、高效获取和维护数据；DBS 是引入数据库后的整个计算机系统，包含数据库、DBMS、应用程序和数据库管理员。"
+    },
+    {
+      "id": "db-features",
+      "priority": 90,
+      "chapters": [1],
+      "patterns": ["文件系统", "数据管理", "人工管理", "数据结构化", "共享性", "数据共享", "共享", "冗余度", "安全性", "完整性", "恢复", "DBMS.*控制"],
+      "explanation": "大纲指出：数据库系统阶段区别于文件系统的根本特点是数据结构化，这是与文件系统的本质区别；此外还有数据共享性高、冗余度低且易扩充，数据独立性高，以及数据由 DBMS 统一管理和控制。DBMS 的控制功能包括安全性保护、完整性检查、并发控制和数据库恢复。"
+    },
+    {
+      "id": "data-model",
+      "priority": 90,
+      "chapters": [1, 8],
+      "patterns": ["数据模型", "概念模型", "逻辑模型", "物理模型", "层次模型", "网状模型", "关系模型", "E-R模型", "实体联系模型", "数据结构.*数据操作", "数据操作.*完整性约束"],
+      "explanation": "大纲规定：数据模型的三要素是数据结构、数据操作和完整性约束。概念模型按用户观点建模，与具体 DBMS 无关，典型工具是 E-R 图；逻辑模型包括层次、网状、关系和面向对象模型；物理模型描述数据在磁盘上的存储结构与存取方法。"
+    },
+    {
+      "id": "relational-terms",
+      "priority": 90,
+      "chapters": [1],
+      "patterns": ["元组", "属性", "关系模式", "域", "分量", "二维表", "关系的性质", "列同质", "元组不能重复", "原子值", "行和列", "行列", "不同的列"],
+      "explanation": "大纲定义：一张表是关系，一行是元组，一列是属性，属性的取值范围是域，元组中的一个属性值是分量。关系的性质包括列同质、不同列可来自同一域但属性名不同、行列次序无关、任意两个元组不能完全相同、分量必须取原子值。"
+    },
+    {
+      "id": "entity-term",
+      "priority": 95,
+      "chapters": [1],
+      "patterns": ["实体", "实体集"],
+      "explanation": "大纲定义：实体是客观存在并可以相互区别的事物，实体集是同型实体的集合。实体用矩形表示，实体的某一特性称为属性；实体通过属性来描述，主码属性名下方加下划线。"
+    },
+    {
+      "id": "data-types",
+      "priority": 85,
+      "chapters": [2, 3],
+      "patterns": ["数据类型", "CHAR(", "NCHAR(", "VARCHAR(", "NVARCHAR(", "DECIMAL(", "NUMERIC(", "FLOAT", "REAL", "DATETIME", "DATE", "金额", "Unicode"],
+      "explanation": "大纲规定：CHAR/NCHAR 为定长字符，VARCHAR/NVARCHAR 为变长字符，其中 NVARCHAR 支持 Unicode，中文首选；INT、SMALLINT、BIGINT 为整数；DECIMAL(p,s)/NUMERIC(p,s) 为定点小数，p 是总位数、s 是小数位；FLOAT/REAL 为浮点数；DATE、DATETIME、TIME 分别表示日期、日期时间和时间。"
+    },
+    {
+      "id": "design-stages",
+      "priority": 90,
+      "chapters": [2, 8, 9, 13],
+      "patterns": ["需求分析", "概念结构设计", "概念设计", "逻辑结构设计", "物理结构设计", "数据库实施", "运行和维护", "试运行", "数据库设计.*阶段", "E-R图.*阶段", "索引.*阶段", "存取方法", "存储结构"],
+      "explanation": "大纲规定：数据库设计分为需求分析、概念结构设计、逻辑结构设计、物理结构设计、数据库实施、数据库运行和维护六个阶段。需求分析产出数据字典、数据流图和需求说明书；概念设计产出独立于 DBMS 的 E-R 图；逻辑设计完成 E-R 图向关系模式转换和规范化；物理设计选择存储结构与存取方法；实施阶段建库建表并试运行；运行维护阶段进行监控、调优、备份和恢复。"
+    },
+    {
+      "id": "er-model",
+      "priority": 90,
+      "chapters": [8],
+      "patterns": ["E-R图", "E-R 图", "实体", "属性", "联系", "矩形", "椭圆", "菱形", "1:1", "1:n", "m:n", "M:N", "M：N", "一对一", "一对多", "多对多"],
+      "explanation": "大纲规定：E-R 图的三要素是实体、属性和联系，分别用矩形、椭圆和菱形表示，主码属性名下方加下划线。联系分为 1:1、1:n 和 m:n；联系本身可以有属性，如选课联系上的成绩、订单包含联系上的数量。m:n 联系上的属性是考试重点。"
+    },
+    {
+      "id": "sql-categories",
+      "priority": 90,
+      "chapters": [3, 14],
+      "patterns": ["DDL", "DML", "DQL", "DCL", "TCL", "数据定义", "数据操纵", "数据查询", "数据控制", "事务控制", "创建数据库", "删除数据库", "显示.*数据库", "GRANT", "REVOKE", "COMMIT", "ROLLBACK", "SAVEPOINT"],
+      "explanation": "大纲规定：DDL 包括 CREATE、ALTER、DROP、TRUNCATE，用于定义数据库对象；DML 包括 INSERT、UPDATE、DELETE，用于改变表中数据；DQL 主要指 SELECT；DCL 包括 GRANT、REVOKE，用于授权和收回权限；TCL 包括 COMMIT、ROLLBACK、SAVEPOINT，用于事务提交与回滚。"
+    },
+    {
+      "id": "sql-table",
+      "priority": 90,
+      "chapters": [3, 14],
+      "patterns": ["CREATE TABLE", "ALTER TABLE", "DROP TABLE", "TRUNCATE TABLE", "PRIMARY KEY", "FOREIGN KEY", "NOT NULL", "UNIQUE", "DEFAULT", "CHECK", "VARCHAR", "NVARCHAR", "DECIMAL", "默认值", "允许为空", "空值", "表结构"],
+      "explanation": "大纲规定：CREATE TABLE 用于创建表并定义数据类型和约束；ALTER TABLE 可增加、修改、删除列及约束；DROP TABLE 删除表结构和数据；TRUNCATE TABLE 只清空数据、保留结构且不能带 WHERE。列级约束可直接写在列定义后，复合主键和复合外键必须使用表级约束。"
+    },
+    {
+      "id": "aggregate",
+      "priority": 90,
+      "chapters": [5, 14],
+      "patterns": ["COUNT", "SUM", "AVG", "MAX", "MIN", "GROUP BY", "HAVING", "聚合", "分组"],
+      "explanation": "大纲规定：COUNT(*) 统计元组个数，不忽略 NULL；COUNT(列名) 统计该列非空值个数；SUM、AVG、MAX、MIN 都忽略 NULL。GROUP BY 按列值分组并对每组使用聚合函数；HAVING 用于筛选分组后的结果，可以使用聚合函数，而 WHERE 在分组前筛选行，不能使用聚合函数。"
+    },
+    {
+      "id": "join",
+      "priority": 90,
+      "chapters": [6, 14],
+      "patterns": ["JOIN", "连接", "笛卡尔积", "自连接", "外连接", "内连接", "CROSS JOIN"],
+      "explanation": "大纲规定：内连接只保留两表都匹配的行；左外连接保留左表全部行，右表无匹配处填 NULL；右外连接保留右表全部行；全外连接保留两表全部行；交叉连接产生笛卡尔积。多表连接时漏写连接条件会产生笛卡尔积，n 张表连接至少需要 n−1 个连接条件。"
+    },
+    {
+      "id": "subquery",
+      "priority": 90,
+      "chapters": [6, 14],
+      "patterns": ["子查询", "嵌套查询", "EXISTS", "NOT EXISTS", "IN (", "ALL (", "ANY (", "标量子查询", "高于.*平均"],
+      "explanation": "大纲规定：子查询是嵌套在另一个查询中的 SELECT，内层查询结果作为外层条件。返回单值时可用比较运算符；返回一组值时用 IN、ANY、ALL；EXISTS 只判断子查询结果是否为空，不关心返回列。“全部/所有”类查询使用双重 NOT EXISTS，对应关系代数的除运算。"
+    },
+    {
+      "id": "set-query",
+      "priority": 90,
+      "chapters": [6, 14],
+      "patterns": ["UNION", "INTERSECT", "EXCEPT", "集合查询"],
+      "explanation": "大纲规定：UNION 合并结果并自动去重，UNION ALL 保留重复行；INTERSECT 求交集，EXCEPT 求差集。参与集合运算的各查询结果必须列数相同、对应列数据类型相同，ORDER BY 只能写在最后一个查询之后并作用于最终结果。"
+    },
+    {
+      "id": "sql-predicates",
+      "priority": 95,
+      "chapters": [4, 14],
+      "patterns": ["LIKE", "BETWEEN", "IS NULL", "IS NOT NULL", "NOT IN (NULL", "NULL", "李_"],
+      "explanation": "大纲规定：LIKE 用于字符串匹配，% 表示任意多个字符，_ 表示任意一个字符；BETWEEN…AND 表示闭区间，包含两个端点；IN 表示等于列表中的某一个值；判断空值必须使用 IS NULL 或 IS NOT NULL，不能使用 = NULL，因为 NULL 表示未知。字符串和日期常量要用单引号。"
+    },
+    {
+      "id": "select-basic",
+      "priority": 80,
+      "chapters": [4, 14],
+      "patterns": ["SELECT", "DISTINCT", "ORDER BY", "WHERE", "LIKE", "BETWEEN", "IS NULL", "TOP", "LIMIT", "单表查询"],
+      "explanation": "大纲规定：SQL 查询书写顺序为 SELECT、FROM、WHERE、GROUP BY、HAVING、ORDER BY，执行顺序为 FROM、WHERE、GROUP BY、HAVING、SELECT、DISTINCT、ORDER BY。WHERE 中不能使用聚合函数，SELECT 中出现的普通列必须出现在 GROUP BY 中或被聚合函数包裹。字符串和日期常量要用单引号，判断空值必须使用 IS NULL。"
+    },
+    {
+      "id": "dml",
+      "priority": 80,
+      "chapters": [3, 14],
+      "patterns": ["INSERT", "UPDATE", "DELETE", "数据更新", "数据插入", "数据删除", "插入记录", "更新记录", "删除记录", "删除操作"],
+      "explanation": "大纲规定：INSERT 用于插入数据，插入查询结果时列数和类型必须对应；UPDATE 修改满足 WHERE 条件的行；DELETE 删除满足 WHERE 条件的行，省略 WHERE 会删除全表数据但保留表结构。UPDATE 和 DELETE 漏写 WHERE 会误改整表，是常见严重错误。"
+    },
+    {
+      "id": "file-system-stage",
+      "priority": 70,
+      "chapters": [1],
+      "patterns": ["文件系统", "人工管理", "数据管理技术", "共享性差", "数据独立性低"],
+      "explanation": "大纲指出：人工管理阶段无专门管理软件，数据不保存、不共享、冗余大，程序与数据不独立；文件系统阶段数据能以文件形式长期保存，由文件系统管理，但数据仍面向应用，共享性差、冗余大，仅有较低的物理独立性；数据库系统阶段实现数据结构化、共享性高、冗余低、独立性高，并由 DBMS 统一管理。"
+    }
+  ]
+}

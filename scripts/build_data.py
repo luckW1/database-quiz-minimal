@@ -11,6 +11,7 @@ EXTRA_SOURCES = [
     ROOT / "source" / "review-doc-questions.json",
     ROOT / "source" / "sql-practice-questions.json",
 ]
+SYLLABUS_SOURCE = ROOT / "source" / "syllabus-explanations.json"
 OUTPUT = ROOT / "data.js"
 
 CHAPTER_RE = re.compile(r"^# (第([一二三四五六七八九十]+)章)\s+(.+)$")
@@ -232,6 +233,59 @@ def build() -> None:
     for question in questions:
         question["chapterTitle"] = chapters[question["chapter"] - 1]["title"]
 
+    syllabus = json.loads(SYLLABUS_SOURCE.read_text(encoding="utf-8"))
+    rules = sorted(
+        syllabus["rules"],
+        key=lambda rule: int(rule.get("priority", 0)),
+        reverse=True,
+    )
+    syllabus_matches: dict[str, int] = {}
+    syllabus_updated = 0
+    skip_concrete_sql_types = {
+        "单表查询",
+        "聚合与分组",
+        "多表连接",
+        "嵌套查询",
+        "数据更新",
+        "SQL 应用题",
+        "SQL 综合题",
+        "MySQL 操作题",
+    }
+    for question in questions:
+        if question["typeName"] in skip_concrete_sql_types:
+            continue
+        haystacks = [
+            question["stem"],
+            " ".join(
+                [
+                    question["stem"],
+                    " ".join(question.get("options", [])),
+                    str(question["answer"]),
+                ]
+            ),
+        ]
+        matched_rule = None
+        for haystack in haystacks:
+            for rule in rules:
+                if question["chapter"] not in rule["chapters"]:
+                    continue
+                if any(
+                    re.search(
+                        pattern if ".*" in pattern else re.escape(pattern),
+                        haystack,
+                        re.IGNORECASE,
+                    )
+                    for pattern in rule["patterns"]
+                ):
+                    matched_rule = rule
+                    break
+            if matched_rule:
+                break
+        if matched_rule:
+            question["explanation"] = matched_rule["explanation"].strip()
+            syllabus_matches[matched_rule["id"]] = syllabus_matches.get(matched_rule["id"], 0) + 1
+            syllabus_updated += 1
+
     for chapter in chapters:
         chapter["count"] = 0
     for question in questions:
@@ -270,6 +324,8 @@ def build() -> None:
             "baseDuplicatesRemoved": len(removed_base_duplicates),
             "addedTotal": len(questions) - base_unique_count,
             "skippedDuplicates": skipped_duplicates,
+            "syllabusExplanationsUpdated": syllabus_updated,
+            "syllabusMatches": syllabus_matches,
             "chapterCount": len(chapters),
             "kindCounts": kind_counts,
         },

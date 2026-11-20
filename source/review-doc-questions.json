@@ -383,7 +383,7 @@
     },
     {
       "reviewNo": "单21",
-      "chapter": 8,
+      "chapter": 1,
       "number": 21,
       "kind": "choice",
       "typeName": "单项选择",
@@ -3068,7 +3068,7 @@
     },
     {
       "reviewNo": "判49",
-      "chapter": 3,
+      "chapter": 7,
       "number": 49,
       "kind": "judge",
       "typeName": "判断",

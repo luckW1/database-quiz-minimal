@@ -17,6 +17,7 @@ assert.equal(data.meta.addedTotal, 351);
 assert.equal(data.meta.kindCounts.choice, 193);
 assert.equal(data.meta.kindCounts.judge, 115);
 assert.equal(data.meta.kindCounts.open, 281);
+assert.equal(data.meta.syllabusExplanationsUpdated, 455);
 
 const ids = new Set();
 const stems = new Set();

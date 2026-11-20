@@ -37,6 +37,7 @@ assets/lucide.min.js  本地图标库
 source/question-bank.md 题库原始 Markdown
 source/review-doc-questions.json 《数据库原理及应用》总复习审核题库
 source/sql-practice-questions.json SQL 练习与 MySQL 实操题
+source/syllabus-explanations.json 考试大纲解析覆盖规则
 source/review-audit.md 文档题目审核与修正记录
 scripts/build_data.py 从 Markdown 题库生成 data.js
 ```
