@@ -7,9 +7,11 @@ const playwrightPath = "C:/Users/31518/.cache/codex-runtimes/codex-primary-runti
 const { chromium } = require(playwrightPath);
 
 const root = path.resolve(__dirname, "..");
+const edgePath = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe";
 const sandbox = { window: {} };
 vm.runInNewContext(fs.readFileSync(path.join(root, "data.js"), "utf8"), sandbox);
 const data = sandbox.window.DB_QUIZ;
+const appOrder = (items) => items.slice().sort((left, right) => left.chapter - right.chapter || left.number - right.number);
 
 let browser;
 
@@ -38,9 +40,12 @@ async function finishQuestion(page, index, total) {
 }
 
 (async () => {
-  browser = await chromium.launch({ headless: true });
+  browser = await chromium.launch({
+    headless: true,
+    ...(fs.existsSync(edgePath) ? { executablePath: edgePath } : {}),
+  });
 
-  const choiceQuestions = data.questions.filter((question) => question.kind === "choice");
+  const choiceQuestions = appOrder(data.questions.filter((question) => question.kind === "choice"));
   const choiceRun = await openMode("choice", choiceQuestions);
   for (let index = 0; index < choiceQuestions.length; index += 1) {
     const question = choiceQuestions[index];
@@ -60,7 +65,7 @@ async function finishQuestion(page, index, total) {
   assert.deepEqual(choiceRun.errors, []);
   await choiceRun.page.close();
 
-  const judgeQuestions = data.questions.filter((question) => question.kind === "judge");
+  const judgeQuestions = appOrder(data.questions.filter((question) => question.kind === "judge"));
   const judgeRun = await openMode("judge", judgeQuestions);
   for (let index = 0; index < judgeQuestions.length; index += 1) {
     const question = judgeQuestions[index];
@@ -75,7 +80,7 @@ async function finishQuestion(page, index, total) {
   assert.deepEqual(judgeRun.errors, []);
   await judgeRun.page.close();
 
-  const openQuestions = data.questions.filter((question) => question.kind === "open");
+  const openQuestions = appOrder(data.questions.filter((question) => question.kind === "open"));
   const openRun = await openMode("open", openQuestions);
   for (let index = 0; index < openQuestions.length; index += 1) {
     const question = openQuestions[index];

@@ -4,6 +4,8 @@
 
 在线访问：<https://luckw1.github.io/database-quiz-minimal/>
 
+当前题库共 589 道唯一题目，按网站 14 个章节分类。
+
 ## 功能
 
 - 14 个章节，可单章练习，也可全部章节混合练习。
@@ -33,6 +35,9 @@ app.js                练习、判题、统计与本地存储
 data.js               浏览器题库数据
 assets/lucide.min.js  本地图标库
 source/question-bank.md 题库原始 Markdown
+source/review-doc-questions.json 《数据库原理及应用》总复习审核题库
+source/sql-practice-questions.json SQL 练习与 MySQL 实操题
+source/review-audit.md 文档题目审核与修正记录
 scripts/build_data.py 从 Markdown 题库生成 data.js
 ```
 

@@ -7,12 +7,16 @@ const { chromium } = require(playwrightPath);
 
 const root = path.resolve(__dirname, "..");
 const screenshots = path.join(root, "screenshots");
+const edgePath = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe";
 fs.mkdirSync(screenshots, { recursive: true });
 
 let browser;
 
 (async () => {
-  browser = await chromium.launch({ headless: true });
+  browser = await chromium.launch({
+    headless: true,
+    ...(fs.existsSync(edgePath) ? { executablePath: edgePath } : {}),
+  });
   const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
   const pageErrors = [];
   page.on("pageerror", (error) => pageErrors.push(error.message));
@@ -51,9 +55,15 @@ let browser;
   await page.screenshot({ path: path.join(screenshots, "desktop-open-answer.png"), fullPage: true });
 
   await page.selectOption("#typeSelect", "choice");
-  for (let index = 0; index < 3; index += 1) {
+  let foundMulti = false;
+  for (let index = 0; index < 30; index += 1) {
+    if ((await page.locator("#typeTag").textContent()).includes("多项选择")) {
+      foundMulti = true;
+      break;
+    }
     await page.locator("#nextButton").click();
   }
+  assert.equal(foundMulti, true);
   assert.match(await page.locator("#typeTag").textContent(), /多项选择/);
   for (let index = 0; index < 4; index += 1) {
     await page.locator(".option-button").nth(index).click();

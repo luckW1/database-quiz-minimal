@@ -1,0 +1,3598 @@
+{
+  "title": "《数据库原理及应用》总复习审核题库",
+  "questions": [
+    {
+      "reviewNo": "单1",
+      "chapter": 1,
+      "number": 1,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "区分不同实体的依据是（ ）。",
+      "options": [
+        "名称",
+        "属性",
+        "对象",
+        "概念"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。实体依靠属性组合来区分。名称只是属性之一，可能重复，不能单独作为唯一区分依据。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单2",
+      "chapter": 1,
+      "number": 2,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "现实世界中客观存在并能相互区别的事物称为（ ）。",
+      "options": [
+        "实体",
+        "实体集",
+        "字段",
+        "记录"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。实体是现实世界中客观存在并能与其他对象相互区别的事物；实体集是同型实体的集合。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单3",
+      "chapter": 1,
+      "number": 3,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "现实世界中事物的特性在信息世界中称为（ ）。",
+      "options": [
+        "实体",
+        "实体标识符",
+        "属性",
+        "关键码"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。现实事物的特性在信息世界中抽象为属性。属性描述实体某一方面，并受域约束。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单4",
+      "chapter": 8,
+      "number": 4,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下列实体类型的联系中，属于一对一联系的是（ ）。",
+      "options": [
+        "教研室对教师的所属联系",
+        "父亲对孩子的亲生联系",
+        "省对省会的所属联系",
+        "供应商与工程项目的供货联系"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。一个省只有一个省会，一个省会只属于一个省，因此是 1:1 联系。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单5",
+      "chapter": 8,
+      "number": 5,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "公司中有多个部门和多名职员，每个职员只能属于一个部门，一个部门可以有多名职员，职员到部门的联系类型是（ ）。",
+      "options": [
+        "一对一",
+        "一对多",
+        "多对一",
+        "多对多"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。从职工看只能到一个部门，从部门看可有多个职工，所以职工到部门是多对一。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单6",
+      "chapter": 8,
+      "number": 6,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下列实体类型的联系中，属于多对多联系的是（ ）。",
+      "options": [
+        "父亲对孩子的亲生联系",
+        "省对省会的所属联系",
+        "供应商与工程项目的供货联系",
+        "班级与学生之间的关系"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。一个供应商可向多个项目供货，一个项目也可由多个供应商供货，是 M:N。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单7",
+      "chapter": 8,
+      "number": 7,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "学生和课程之间是典型的（ ）关系。",
+      "options": [
+        "一对一",
+        "多对一",
+        "一对多",
+        "多对多"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。一个学生可选多门课，一门课也可被多名学生选，学生与课程是典型 M:N。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单8",
+      "chapter": 8,
+      "number": 8,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "学生社团可以接纳多名学生参加，但每个学生只能参加一个社团，从社团到学生之间的联系类型是（ ）。",
+      "options": [
+        "一对一",
+        "多对一",
+        "一对多",
+        "多对多"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。一个社团对应多名学生，一个学生只参加一个社团，从社团到学生是 1:N。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单9",
+      "chapter": 1,
+      "number": 9,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "概念模型是现实世界的第一层抽象，这一类最著名的模型是（ ）。",
+      "options": [
+        "层次模型",
+        "关系模型",
+        "网状模型",
+        "实体-联系模型"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。概念模型最常用的表示是实体-联系模型。层次、网状和关系模型属于逻辑数据模型。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单10",
+      "chapter": 1,
+      "number": 10,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "采用二维表格结构表达实体类型及实体间联系的数据模型是（ ）。",
+      "options": [
+        "层次模型",
+        "关系模型",
+        "网状模型",
+        "实体-联系模型"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。关系模型用二维表表达实体及实体间联系，表与表通过公共属性建立联系。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单11",
+      "chapter": 1,
+      "number": 11,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "不同的数据库管理系统支持不同的数据模型。在常用的数据模型中，不包括（ ）",
+      "options": [
+        "网状模型",
+        "链状模型",
+        "层次模型",
+        "关系模型"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。常见逻辑数据模型包括层次、网状、关系和面向对象模型，没有“链状模型”。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单12",
+      "chapter": 1,
+      "number": 12,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "关系数据模型的3个要素是（ ）。",
+      "options": [
+        "关系数据结构、关系操作集合和关系规范化理论",
+        "关系数据结构、关系规范化理论和关系的完整性约束",
+        "关系规范化理论、关系操作集合和关系的完整性约束",
+        "关系数据结构、关系操作集合和关系的完整性约束"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。关系数据模型由关系数据结构、关系操作集合和关系完整性约束三部分组成。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单13",
+      "chapter": 1,
+      "number": 13,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在数据库技术中，独立于计算机系统的模型是（ ）。",
+      "options": [
+        "E-R模型",
+        "关系模型",
+        "层次模型",
+        "面向对象的模型"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。E-R 模型描述业务概念结构，独立于具体计算机系统和 DBMS，是概念模型。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单14",
+      "chapter": 1,
+      "number": 14,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "如果在一个关系中，存在多个属性(或属性组)都能用来唯一标识该关系的元组，且其任何子集都不具有这一特性，则这些属性(或属性组)被称为该关系的（ ）。",
+      "options": [
+        "候选键",
+        "主键",
+        "外键",
+        "连接键"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。能唯一标识元组且任何真子集都不能唯一标识元组的属性组是候选键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单15",
+      "chapter": 1,
+      "number": 15,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "一个关系模式中的键（ ）。",
+      "options": [
+        "可以由多个任意属性组成",
+        "至多由一个属性组成",
+        "由一个或多个属性组成，其值能够惟一标识关系中一个元组",
+        "以上都不是"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。键由一个或多个属性组成，其值能唯一标识元组；主键是选定的候选键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单16",
+      "chapter": 1,
+      "number": 16,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "候选键的属性可以有（ ）。",
+      "options": [
+        "多个",
+        "0个",
+        "1个",
+        "1个或多个"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。候选键可由一个属性或属性组构成，因此属性个数可以是 1 个或多个。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单17",
+      "chapter": 1,
+      "number": 17,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "候选键中的属性称为（ ）。",
+      "options": [
+        "非主属性",
+        "主属性",
+        "复合属性",
+        "关键属性"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。包含在任意候选键中的属性称为主属性，不包含在任何候选键中的属性称为非主属性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单18",
+      "chapter": 1,
+      "number": 18,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下面的选项不是关系数据库基本特征的是（ ）。",
+      "options": [
+        "不同的列应有不同的数据类型",
+        "不同的列应有不同的列名",
+        "与行的次序无关",
+        "与列的次序无关"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。关系要求同一列同域、列名不同、行列次序无关；不同列允许使用相同数据类型。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单19",
+      "chapter": 1,
+      "number": 19,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "设关系R和S具有相同的目，且它们相对应的属性的值取自同一个域，则R-(R-S)等于（ ）。",
+      "options": [
+        "R∪S",
+        "R∩S",
+        "R×S",
+        "R÷S"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。由集合恒等式 R-(R-S)=R∩S，差运算两次的结果正好是交集。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单20",
+      "chapter": 1,
+      "number": 20,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "从一个关系中取出满足某个条件的所有记录形成一个新的关系的操作是（ ）操作 。",
+      "options": [
+        "投影",
+        "连接",
+        "选择",
+        "复制"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。选择运算按条件筛选行，对应 SQL 的 WHERE；投影按属性选列。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单21",
+      "chapter": 8,
+      "number": 21,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "关系代数中的自然连接操作是由（ ）操作组合而成 。",
+      "options": [
+        "选择和投影",
+        "选择和笛卡尔积",
+        "投影、选择、笛卡尔积",
+        "投影和笛卡尔积"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。自然连接先用笛卡尔积组合，再选择公共属性相等的元组，最后投影去掉重复公共属性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单22",
+      "chapter": 1,
+      "number": 22,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "关系数据库中的投影操作是指从关系中（ ）。",
+      "options": [
+        "抽出特定记录",
+        "抽出特定字段",
+        "建立相应的影像",
+        "建立相应的图形"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。投影从关系中选取指定属性列，并自动消除结果中的重复元组。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单23",
+      "chapter": 1,
+      "number": 23,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在关系代数的连接操作中，哪一种连接操作需要取消重复列？（ ）",
+      "options": [
+        "自然连接",
+        "笛卡儿积",
+        "等值连接",
+        "θ连接"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。自然连接会合并同名属性并取消重复列，等值连接和 θ 连接通常保留两表全部属性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单24",
+      "chapter": 1,
+      "number": 24,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在关系代数中，（ ）操作称为从两个关系的笛卡儿积中选取它们属性间满足一定条件的元组。",
+      "options": [
+        "投影",
+        "选择",
+        "自然连接",
+        "θ连接"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。θ 连接从两个关系的笛卡尔积中选取属性间满足给定条件的元组。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单25",
+      "chapter": 1,
+      "number": 25,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "DBS是采用了数据库技术的计算机系统。DBS是一个集合体，包含计算机硬件、数据库、DBMS、数据库应用系统等软件和（ ）。",
+      "options": [
+        "用户",
+        "网络操作系统",
+        "通信线路",
+        "交换机"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。数据库系统是人机系统，除硬件、数据库、DBMS 和应用外，还包括数据库管理员和用户。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单26",
+      "chapter": 1,
+      "number": 26,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "逻辑数据独立性是指（ ）。",
+      "options": [
+        "概念模式改变，外模式和应用程序不变",
+        "概念模式改变，内模式不变",
+        "内模式改变，概念模式不变",
+        "内模式改变，外模式和应用程序不变"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。逻辑独立性由外模式/模式映像保证，使概念模式变化时外模式和应用程序尽量不变。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单27",
+      "chapter": 1,
+      "number": 27,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "数据库系统中，用（ ）描述全部数据的整体逻辑结构。",
+      "options": [
+        "外模式",
+        "存储模式",
+        "内模式",
+        "概念模式"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。概念模式也称模式，描述数据库全体数据的整体逻辑结构，一个数据库只有一个模式。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单28",
+      "chapter": 1,
+      "number": 28,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "物理数据独立性是指（ ）。",
+      "options": [
+        "概念模式改变，外模式和应用程序不变",
+        "概念模式改变，内模式不变",
+        "内模式改变，概念模式不变",
+        "内模式改变，外模式和应用程序不变"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。物理独立性由模式/内模式映像保证，使内模式变化时概念模式和应用尽量不变。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单29",
+      "chapter": 8,
+      "number": 29,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在数据库设计中，E-R模型是进行（ ）的一个主要工具。",
+      "options": [
+        "需求分析",
+        "概念设计",
+        "逻辑设计",
+        "物理设计"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。E-R 图是概念结构设计的主要工具，用于抽象实体、属性和联系。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单30",
+      "chapter": 8,
+      "number": 30,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在数据库设计中，当合并局部E-R图时，学生在某一局部应用中被当做实体，而在另一局部应用中被当做属性，那么这种冲突称为（ ）。",
+      "options": [
+        "属性冲突",
+        "命名冲突",
+        "联系冲突",
+        "结构冲突"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。同一对象在一处是实体、另一处是属性，属于抽象层次不一致的结构冲突。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单31",
+      "chapter": 8,
+      "number": 31,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在数据库设计中，学生的学号在某一局部应用中被定义为字符型，而在另一局部应用中被定义为整型，那么这种冲突称为（ ）。",
+      "options": [
+        "属性冲突",
+        "命名冲突",
+        "联系冲突",
+        "结构冲突"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。同一属性在不同局部模型中的类型或域定义不同，属于属性冲突。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单32",
+      "chapter": 8,
+      "number": 32,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "E-R图是数据库设计的工具之一，它适用于建立数据库的（ ）。",
+      "options": [
+        "概念模型",
+        "逻辑模型",
+        "结构模型",
+        "物理模型"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。E-R 图建立概念模型；转换为关系模式后才进入逻辑模型和物理实现。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单33",
+      "chapter": 8,
+      "number": 33,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "E-R图中的主要元素是（ ）、联系和属性。",
+      "options": [
+        "记录型",
+        "结点",
+        "实体集",
+        "表"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。E-R 图的三要素是实体集、联系和属性，分别用矩形、菱形和椭圆表示。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单34",
+      "chapter": 8,
+      "number": 34,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "概念结构设计是整个数据库设计的关键，它通过对用户需求进行综合、归纳与抽象，形成一个独立于具体DBMS的（ ）。",
+      "options": [
+        "数据模型",
+        "概念模型",
+        "层次模型",
+        "关系模型"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。概念结构设计的产物是独立于具体 DBMS 的概念模型，通常用 E-R 图表示。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单35",
+      "chapter": 8,
+      "number": 35,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "概念设计的结果是（ ）。",
+      "options": [
+        "一个与DBMS相关的概念模式",
+        "一个与DBMS无关的概念模式",
+        "数据库系统的公用视图",
+        "数据库系统的数据词典"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。概念设计得到与 DBMS 无关的概念模式；逻辑设计才将其转换为具体数据模型。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单36",
+      "chapter": 8,
+      "number": 36,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "数据库概念设计的E-R方法中，用属性描述实体的特征，属性在E-R图中，用（ ）表示。",
+      "options": [
+        "矩形",
+        "四边形",
+        "菱形",
+        "椭圆形"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。实体用矩形、联系用菱形、属性用椭圆表示，主键属性通常在属性名下加下划线。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单37",
+      "chapter": 8,
+      "number": 37,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在数据库的概念设计中，最常用的数据模型是（ ）。",
+      "options": [
+        "形象模型",
+        "物理模型",
+        "逻辑模型",
+        "实体联系模型"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。概念设计面向业务语义，最常用实体-联系模型；关系模型是实现阶段的逻辑模型。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单38",
+      "chapter": 8,
+      "number": 38,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在数据库设计中，在概念设计阶段可用E-R方法，其设计出的图称为（ ）。",
+      "options": [
+        "实物示意图",
+        "实用概念图",
+        "实体表示图",
+        "实体联系图"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。用 E-R 方法设计出的图称为实体-联系图，即 E-R 图。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单39",
+      "chapter": 9,
+      "number": 39,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "从E-R模型向关系模型转换时，一个m：n联系转换为关系模式时，该关系模式的关键字是（ ）。",
+      "options": [
+        "M端实体的关键字",
+        "N端实体的关键字",
+        "M端实体关键字与N端实体关键字组合",
+        "重新选取其他属性"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。M:N 联系必须转换为独立关系表，主键由两端实体的主键组合而成。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单40",
+      "chapter": 9,
+      "number": 40,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "从E-R图导出关系模型时，如果两实体间的联系是M：N的，下列说法中正确的是（ ）。",
+      "options": [
+        "将N方关键字和联系的属性纳入M方的属性中",
+        "将M方关键字和联系的属性纳入N方的属性中",
+        "增加一个关系表示联系，其中纳入M方和N方的关键字",
+        "在M方属性和N方的属性中均增加一个表示级别的属性"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。M:N 联系不能在任一端简单增加单值外键，必须新增联系关系并包含双方主键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单41",
+      "chapter": 9,
+      "number": 41,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "如果采用关系数据库实现应用，在数据库的逻辑设计阶段需将（ ）转换为关系数据模型。",
+      "options": [
+        "E-R模型",
+        "层次模型",
+        "关系模型",
+        "网状模型"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。逻辑设计阶段将概念设计得到的 E-R 模型转换为关系模式并规范化。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单42",
+      "chapter": 9,
+      "number": 42,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "如何构造出一个合适的数据逻辑结构是（ ）主要解决的问题。",
+      "options": [
+        "物理结构设计",
+        "数据字典",
+        "逻辑结构设计",
+        "关系数据库查询"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。逻辑结构设计负责选择数据模型、转换关系模式并构造合适的数据逻辑结构。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单43",
+      "chapter": 9,
+      "number": 43,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在ER模型中，如果有3个不同的实体型，3个M：N联系，根据ER模型转换为关系模型的规则，转换为关系的数目是（ ）。",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。3 个实体各转换为 1 个关系，3 个 M:N 联系各增加 1 个关系，共 6 个。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单44",
+      "chapter": 9,
+      "number": 44,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在数据库设计中，将E-R图转换成关系数据模型的过程属于（ ）。",
+      "options": [
+        "需求分析阶段",
+        "逻辑设计阶段",
+        "概念设计阶段",
+        "物理设计阶段"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。E-R 图到关系模型的转换属于逻辑结构设计，不是概念设计或物理设计。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单45",
+      "chapter": 10,
+      "number": 45,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "规范化理论是关系数据库进行逻辑设计的理论依据，根据这个理论，关系数据库中的关系必须满足：其每个属性都是（ ）。",
+      "options": [
+        "互不相关的",
+        "不可分解的",
+        "长度可变的",
+        "互相关联的"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。关系模型要求每个分量都是原子值，即属性不可再分，这是 1NF 的基本要求。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单46",
+      "chapter": 10,
+      "number": 46,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "关系规范化中的删除操作异常是指（ ）",
+      "options": [
+        "不该删除的数据被删除",
+        "不该插入的数据被插入",
+        "应该删除的数据未被删除",
+        "应该插入的数据未被插入"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。删除异常是删除一条记录时附带丢失了本应保留的其他信息。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单47",
+      "chapter": 10,
+      "number": 47,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "关系模式中，满足2NF的模式（ ）。",
+      "options": [
+        "可能是1NF",
+        "必定是1NF",
+        "必定是3NF",
+        "必定是BCNF"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。2NF 以 1NF 为前提，所以满足 2NF 必定满足 1NF，但不一定满足 3NF。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单48",
+      "chapter": 10,
+      "number": 48,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "关系模式至少应满足（ ）才允许存在于关系数据库中。",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。关系模式至少应满足 1NF，所有属性值原子；3NF 是良好设计目标，不是“可用”的最低条件。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单49",
+      "chapter": 10,
+      "number": 49,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "关系数据库规范化是为解决关系数据库中（ ）问题而引入的。",
+      "options": [
+        "插入、删除异常和数据冗余",
+        "提高查询速度",
+        "减少数据操作的复杂性",
+        "保证数据的安全性和完整性"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。规范化主要减少数据冗余并消除插入、删除和更新异常。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单50",
+      "chapter": 10,
+      "number": 50,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "规范化过程主要为克服数据库逻辑结构中的插入异常、删除异常以及（ ）的缺陷。",
+      "options": [
+        "数据的不一致性",
+        "结构不合理",
+        "冗余度大",
+        "数据丢失"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。规范化的直接目标是降低冗余，从而减少插入、删除和更新异常。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单51",
+      "chapter": 10,
+      "number": 51,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "由于关系模式设计不当所引起的插入异常指的是（ ）。",
+      "options": [
+        "两个事务并发地对同一关系进行插入而造成数据库不一致",
+        "由于码值的一部分为空而不能将有用的信息作为一个元组插入到关系中",
+        "未经授权的用户对关系进行了插入",
+        "插入操作因为违反完整性约束条件而遭到拒绝"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。插入异常通常是因为缺少主键的一部分，导致有用信息无法独立插入。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单52",
+      "chapter": 10,
+      "number": 52,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在关系模式中，如果属性A和B存在1对1的联系，则说（ ）。",
+      "options": [
+        "A→B",
+        "B→A",
+        "A←→B",
+        "以上都不是"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。A 与 B 为一对一联系意味着 A 决定 B 且 B 决定 A，即 A↔B。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单53",
+      "chapter": 2,
+      "number": 53,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在数据库的物理结构中，将具有相同值的元组集中存放在连续的物理块称为（ ）存储方法。",
+      "options": [
+        "HASH",
+        "B+树索引",
+        "聚簇",
+        "其他"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。聚簇把具有相同或相近聚簇键值的元组集中存放在连续物理块中，提高相关查询效率。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单54",
+      "chapter": 2,
+      "number": 54,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "数据库设计可划分为六个阶段，每个阶段都有自己的设计内容，“为哪些关系在哪些属性上建什么样的索引”这一设计内容应该属于（ ）设计阶段。",
+      "options": [
+        "概念设计",
+        "逻辑设计",
+        "物理设计",
+        "全局设计"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。为关系选择索引和存取路径属于物理结构设计。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单55",
+      "chapter": 2,
+      "number": 55,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "存取方法设计是数据库设计的（ ）阶段的任务。",
+      "options": [
+        "需求分析",
+        "概念结构设计",
+        "逻辑结构设计",
+        "物理结构设计"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。存取方法设计包括索引、聚簇和文件组织，是物理设计阶段任务。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单56",
+      "chapter": 2,
+      "number": 56,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下列关于数据库运行和维护的叙述中，（ ）是正确的。",
+      "options": [
+        "只要数据库正式投入运行，标志着数据库设计工作的结束",
+        "数据库的维护工作就是维护数据库系统的正常运行",
+        "数据库的维护工作就是发现问题、修改问题",
+        "数据库正式投入运行标志着数据库运行和维护工作的开始"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。数据库投入运行后进入运行维护阶段，仍需监控、调优、备份、恢复和结构维护。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单57",
+      "chapter": 3,
+      "number": 57,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下列选项中属于创建数据库的语句是（ ）。",
+      "options": [
+        "CREATE DATABASE",
+        "ALTER DATABASE",
+        "DROP DATABASE",
+        "以上都不是"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。CREATE DATABASE 用于创建数据库；ALTER 修改，DROP 删除。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单58",
+      "chapter": 3,
+      "number": 58,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在 MySQL 中，每个数据库通常对应存放在一个与数据库同名的（ ）中。",
+      "options": [
+        "文件",
+        "文件夹",
+        "路径",
+        "以上都不是"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。在 MySQL 数据目录中，每个数据库通常对应一个与数据库同名的文件夹。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单59",
+      "chapter": 3,
+      "number": 59,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "显示当前所有数据库的命令是（ ）。",
+      "options": [
+        "SHOW DATABASES",
+        "SHOW DATABASE",
+        "LIST DATABASES",
+        "LIST DATABASE"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。MySQL 使用 SHOW DATABASES 查看当前服务器上的数据库列表。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单60",
+      "chapter": 3,
+      "number": 60,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在MySQL5.5以上系统中，默认的存储引擎是（ ）。",
+      "options": [
+        "MyISAM",
+        "MEMORY",
+        "InnoDB",
+        "ARCHIVE"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。MySQL 5.5 起默认存储引擎为 InnoDB，支持事务、行锁和外键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单61",
+      "chapter": 3,
+      "number": 61,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在MySQL 8.0中，默认的MySQL服务的服务名称是（ ）。",
+      "options": [
+        "mysql",
+        "mysql57",
+        "mysql80",
+        "mysql8.0"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。Windows 版 MySQL 8.0 的默认服务名通常为 MySQL80。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单62",
+      "chapter": 3,
+      "number": 62,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "MySQL使用（ ）文件中的配置参数。",
+      "options": [
+        "my-larger.ini",
+        "my-small.ini",
+        "my-huge.ini",
+        "my.ini"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。MySQL 在 Windows 上常从 my.ini 读取服务器和客户端配置参数。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单63",
+      "chapter": 3,
+      "number": 63,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下列选项中属于删除数据库的语句是（ ）。",
+      "options": [
+        "CREATE DATABASE",
+        "USE DATABASE",
+        "DROP DATABASE",
+        "以上都不"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。DROP DATABASE 用于删除整个数据库及其对象。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单64",
+      "chapter": 3,
+      "number": 64,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "选择要执行操作的数据库，应该哪个SQL命令？（ ）",
+      "options": [
+        "USE",
+        "GO",
+        "EXEC",
+        "DB"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。USE 数据库名 用于把已有数据库切换为当前数据库。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单65",
+      "chapter": 1,
+      "number": 65,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下面关于数据库中表的行和列的叙述正确的是（ ）。",
+      "options": [
+        "表中的行是有序的，列是无序的",
+        "表中的列是有序的，行是无序的",
+        "表中的行和列都是有序的",
+        "表中的行和列都是无序的"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。关系模型理论上把关系看作元组集合，行列顺序都无意义；显示顺序可用 ORDER BY 指定。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单66",
+      "chapter": 5,
+      "number": 66,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "基于这样的3个表，即学生表S、课程表C和学生选课表SC，它们的关系模式如下：S(S#，SN，SEX，AGE，DEPT)(学号，姓名，性别，年龄，系别)C(C#，CN)(课程号，课程名称)SC(S#，C#，GRADE)(学号，课程号，成绩).检索选修4门以上课程的学生总成绩(不统计不及格的课程)，并要求按总成绩的降序排列出来。正确的SELECT语句是（ ）。",
+      "options": [
+        "SELECT S#,SUM(GRAGE) FROM SC WHERE GRADE>=60 GROUP BY S# ORDER BY S# HAVING COUNT(*)>=4",
+        "SELECT S#,SUM(GRADE) FROM SC WHERE GRADE>=60 GROUP BY S# HAVING COUNT(*)>=4 ORDER BY 2 DESC",
+        "SELECT S#,SUM(GRADE) FROM SC WHERE GRADE>=60 HAVING COUNT(*)<=4 GROUP BY S# ORDER BY 2 DESC",
+        "SELECT S#,SUM(GRADE) FROM SC WHERE GRADE>=60 HAVING COUNT(*)>=4 GROUP BY S# ORDER BY 2"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。先筛选及格课程，再按学生分组，HAVING 保留门数至少 4 的组，最后按总成绩降序排列。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单67",
+      "chapter": 5,
+      "number": 67,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下列聚合函数不忽略空值(NULL)的是（ ）。",
+      "options": [
+        "SUM(列名)",
+        "MAX(列名)",
+        "COUNT(*)",
+        "AVG(列名)"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。COUNT(*) 统计行数，不检查某列是否为 NULL；其他聚合函数都忽略 NULL。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单68",
+      "chapter": 4,
+      "number": 68,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在SQL中，下列涉及空值的操作，不正确的是（ ）。",
+      "options": [
+        "AGE IS NULL",
+        "AGE IS NOT NULL",
+        "AGE=NULL",
+        "NOT(AGE IS NULL)"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。NULL 不能用 = 判断，必须使用 IS NULL 或 IS NOT NULL。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单69",
+      "chapter": 2,
+      "number": 69,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "“学生-选课-课程”数据库中的3个关系：\nS(S#,SNAME,SEX,DEPARTMENT)，主码是S#；\nC(C#,CNAME,TEACHER)，主码是C#；\nSC(S#,C#,GRADE)，主码是(S#，C#)。\n在下列关于保持数据库完整性的叙述中，哪一个是不正确的？（ ）",
+      "options": [
+        "向关系SC插入元组时，S#和C#都不能是空值(NULL)",
+        "可以任意删除关系SC中的元组",
+        "向任何一个关系插入元组时，必须保证该关系主码值的唯一性",
+        "可以任意删除关系C中的元组"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。关系 C 的主键被 SC 外键引用，任意删除 C 中元组可能破坏参照完整性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单70",
+      "chapter": 4,
+      "number": 70,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "已知学生选课信息表：sc(sno,cno,grade)。查询“至少选修了一门课程，但没有学习成绩的学生学号和课程号”的SQL语句是（ ）。",
+      "options": [
+        "SELECT sno,cno FROM sc WHERE grade=NULL",
+        "SELECT sno,cno FROM sc WHERE grade IS ‘’",
+        "SELECT sno,cno FROM sc WHERE grade IS NULL",
+        "SELECT sno,cno FROM sc WHERE grade=’’"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。无成绩表示 grade 为 NULL，应使用 IS NULL；空字符串与 NULL 语义不同。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单71",
+      "chapter": 3,
+      "number": 71,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "若要删除数据库中已经存在的表S，可用（ ）。",
+      "options": [
+        "DELETE TABLE S",
+        "DELETE S",
+        "DROP TABLE S",
+        "DROP S"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。删除表对象使用 DROP TABLE；DELETE 只删除表中的行。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单72",
+      "chapter": 3,
+      "number": 72,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在下列SQL语句中，修改表结构的语句是（ ）。",
+      "options": [
+        "ALTER",
+        "CREATE",
+        "UPDATE",
+        "INSERT"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。ALTER 用于修改表结构，CREATE 创建对象，UPDATE 和 INSERT 操作数据。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单73",
+      "chapter": 4,
+      "number": 73,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "SELECT语句中，（ ）子句用于选择满足给定条件的元组。",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "GROUP BY",
+        "ORDER BY"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。WHERE 在分组前筛选满足条件的行；HAVING 筛选分组后的组。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单74",
+      "chapter": 4,
+      "number": 74,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "SELECT语句中，若希望将查询结果排序，则应在SELECT语句中使用（ ）子句。",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "GROUP BY",
+        "ORDER BY"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。ORDER BY 用于对查询结果排序，可指定 ASC 或 DESC。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单75",
+      "chapter": 4,
+      "number": 75,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "设关系R(A,B,C)与SQL语句“SELECT DISTINCT A FROM R WHERE B=17”等价的关系代数表达式是（ ）。",
+      "options": [
+        "πA(σB=17(R))",
+        "σB=17(πA(R))",
+        "σB=17(πA,C(R))",
+        "πA,C(σB=17(R))"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。SQL 先按 B=17 选择行，再投影 A 并去重，对应 πA(σB=17(R))。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单76",
+      "chapter": 4,
+      "number": 76,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "“学生-选课-课程”数据库中：\nS(S#,SNAME,SEX,DEPARTMENT)，主码为 S#；\nC(C#,CNAME,TEACHER)，主码为 C#；\nSC(S#,C#,GRADE)，主码为（S#,C#）。\n\n查找姓“王”的学生学号和姓名，下列哪些写法正确？（ ）\n\nⅠ. SELECT S#,SNAME FROM S WHERE SNAME='王%'\nⅡ. SELECT S#,SNAME FROM S WHERE SNAME LIKE '王%'\nⅢ. SELECT S#,SNAME FROM S WHERE SNAME LIKE '王_'",
+      "options": [
+        "Ⅰ",
+        "Ⅱ",
+        "Ⅲ",
+        "全部"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。字符常量必须加引号；查找姓王的学生应写 SNAME LIKE '王%'，% 表示任意长度字符。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单77",
+      "chapter": 4,
+      "number": 77,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在SQL语言中，条件“年龄 BETWEEN 20 AND 30”表示年龄在20～30之间，且（ ）。",
+      "options": [
+        "包括20岁和30岁",
+        "不包括20岁和30岁",
+        "包括20岁但不包括30岁",
+        "包括30岁但不包括20岁"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。BETWEEN 20 AND 30 等价于 age>=20 AND age<=30，包含两个端点。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单78",
+      "chapter": 5,
+      "number": 78,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "“学生-选课-课程”数据库中的3个关系：\nS(S#,SNAME,SEX,DEPARTMENT)，主码是S#；\nC(C#,CNAME,TEACHER)，主码是C#；\nSC(S#,C#,GRADE)，主码是(S#，C#)。\n若要“查询选修了3门以上课程的学生的学号”，则正确的SQL语句是（ ）。",
+      "options": [
+        "SELECT S# FROM SC GROUP BY S# WHERE COUNT(*)> 3",
+        "SELECT S# FROM SC GROUP BY S# HAVING COUNT(*)> 3",
+        "SELECT S# FROM SC ORDER BY S# WHERE COUNT(*)> 3",
+        "SELECT S# FROM SC ORDER BY S# HAVING COUNT(*)> 3"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。分组后的聚合条件必须放在 HAVING 中，WHERE 不能直接使用 COUNT(*)。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单79",
+      "chapter": 5,
+      "number": 79,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "SELECT语句中，使用（ ）子句可按指定列的值分组。",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "GROUP BY",
+        "ORDER BY"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。GROUP BY 按指定列或列组合分组，每组产生一行汇总结果。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单80",
+      "chapter": 5,
+      "number": 80,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "SELECT语句中，使用GROUP BY子句可按指定列的值分组，同时使用（ ）可提取满足条件的组。",
+      "options": [
+        "WHERE",
+        "HAVING",
+        "GROUP BY",
+        "ORDER BY"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。HAVING 用于分组后筛选组，可使用 COUNT、SUM、AVG 等聚合函数。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单81",
+      "chapter": 6,
+      "number": 81,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "“学生-选课-课程”数据库中的3个关系：\nS(S#,SNAME,SEX,DEPARTMENT)，主码是S#；\nC(C#,CNAME,TEACHER)，主码是C#；\nSC(S#,C#,GRADE)，主码是(S#，C#)。\n查找每个学生的学号、姓名、选修的课程名和成绩，将使用关系（ ）。",
+      "options": [
+        "只有S,SC",
+        "只有SC,C",
+        "只有S,C",
+        "S,SC,C"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。学号和姓名来自 S，课程名来自 C，成绩来自 SC，因此需要同时连接 S、SC、C。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单82",
+      "chapter": 6,
+      "number": 82,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "“学生-选课-课程”数据库中的3个关系：\nS(S#,SNAME,SEX,DEPARTMENT)，主码是S#；\nC(C#,CNAME,TEACHER)，主码是C#；\nSC(S#,C#,GRADE)，主码是(S#，C#)。\n若要查找“由张劲老师执教的数据库课程的平均成绩、最高成绩和最低成绩”，则将使用关系（ ）。",
+      "options": [
+        "只有S,SC",
+        "只有SC,C",
+        "只有S,C",
+        "S,SC,C"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。教师姓名在 C，成绩在 SC；题目不要求 S 中属性，因此使用 C 和 SC。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单83",
+      "chapter": 6,
+      "number": 83,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "基于这样的3个表，即学生表S、课程表C和学生选课表SC，它们的关系模式如下：\nS(S#，SN，SEX，AGE，DEPT)(学号，姓名，性别，年龄，系别)，\nC(C#，CN)(课程号，课程名称)，\nSC(S#，C#，GRADE)(学号，课程号，成绩)，\n检索学生姓名及其所选修课程的课程号和成绩。正确的SELECT语句是（ ）。",
+      "options": [
+        "SELECT S.SN,SC.C#,SC.GRADE FROM S WHERE S.S#=SC.S#",
+        "SELECT S.SN, SC.C#,SC.GRADE FROM SC WHERE S.S#=SC.GRADE",
+        "SELECT S.SN,SC.C#,SC.GRADE FROM S, SC WHERE S.S#=SC.S#",
+        "SELECT S.SN,SC.C#,SC.GRADE FROM S,SC"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。学生姓名在 S，课程号和成绩在 SC，需按 S# 等值连接 S 与 SC。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单84",
+      "chapter": 6,
+      "number": 84,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "假设学生关系S（S＃，SNAME，SEX），课程关系C（C＃，CNAME），学生选课关系SC（S＃，C＃，GRADE）。要查询选修“Computer”课的男生姓名，将涉及到关系（ ）。",
+      "options": [
+        "S",
+        "SC",
+        "SC和C",
+        "S、SC和C"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。性别在 S，成绩和选课关系在 SC，课程名在 C，三个关系都需要。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单85",
+      "chapter": 6,
+      "number": 85,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "设有关系R(A,B,C)和S(C,D)，与关系代数表达式πA,B,D(σR.C=S.C(R∞S))等价的SQL语句是（ ）。",
+      "options": [
+        "SELECT * FROM R，S WHERE R.C=S.C",
+        "SELECT A,B,D FROM R,S WHERE R.C=S.C",
+        "SELECT A,B,D FROM R,S WHERE R=S",
+        "SELECT A,B FROM R WHERE(SELECT D FROM S WHERE R.C=S.C"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。先按 R.C=S.C 连接，再投影 A、B、D；重复列 C 只在连接条件中使用。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单86",
+      "chapter": 6,
+      "number": 86,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "有关系S(S#,SNAME,SAGE)，C(C#,CNAME)，SC(S#,C#,GRADE)。要查询选修“ACCESS”课的年龄不小于20的全体学生姓名的SQL语句是“SELECT SNAME FROM S,C,SC WHERE子句”。这里的WHERE子句的内容是（ ）。",
+      "options": [
+        "S.S#=SC.S# AND C.C#=SC.C# AND SAGE>=20 AND CNAME='ACCESS'",
+        "S.S#=SC.S# AND C.C#=SC.C#",
+        "SAGE>=20 AND CNAME='ACCESS'",
+        "SAGE>=20 AND CNAME IN ACCESS"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。必须同时建立 S-SC、C-SC 连接，并筛选年龄和课程名；字符常量 ACCESS 要加引号。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单87",
+      "chapter": 6,
+      "number": 87,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "有关系S（S＃，SNAME，SEX），C（C＃，CNAME），SC（S＃，C＃，GRADE）。其中S＃是学生号，SNAME是学生姓名，SEX是性别， C＃是课程号，CNAME是课程名称。要查询选修“数据库”课的全体男生姓名的SQL语句是SELECT SNAME FROM S,C,SC WHERE子句。这里的WHERE子句的内容是（ ）。",
+      "options": [
+        "S.S#=SC.S# AND C.C#=SC.C# AND SEX='男' AND CNAME='数据库'",
+        "S.S#=SC.S# AND C.C#=SC.C#",
+        "SEX='男' AND CNAME='数据库'",
+        "S.SEX='男' AND CNAME='数据库'"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。需要连接 S、SC、C，并同时限制 SEX='男' 与 CNAME='数据库'。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单88",
+      "chapter": 4,
+      "number": 88,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "有如下的SQL语句。\nⅠ. SELECT sname FROM s, sc WHERE grade<60\nⅡ. SELECT sname FROM s WHERE sno IN(SELECT sno FROM sc WHERE grade<60)\nⅢ. SELECT sname FROM s, sc WHERE s.sno=sc.sno AND grade<60\n若要查找分数(grade)不及格的学生姓名(sname)，则以上正确的有哪些？（ ）",
+      "options": [
+        "Ⅰ和Ⅱ",
+        "Ⅰ和Ⅲ",
+        "Ⅱ和Ⅲ",
+        "Ⅰ、Ⅱ和Ⅲ"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。Ⅱ使用子查询，Ⅲ包含连接条件，均正确；Ⅰ缺少 S 与 SC 的连接条件，会产生错误组合。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单89",
+      "chapter": 6,
+      "number": 89,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "基于这样的3个表，即学生表S、课程表C和学生选课表SC，它们的关系模式如下：\nS(S#，SN，SEX，AGE，DEPT)(学号，姓名，性别，年龄，系别)\nC(C#，CN)(课程号，课程名称)\nSC(S#，C#，GRADE)(学号，课程号，成绩)。\n检索选修课程“C2”的学生中成绩最高的学生的学号。正确的SELECT语句是（ ）。",
+      "options": [
+        "SELECT S# FROM SC WHERE C#='C2' AND GRADE>=(SELECT GRADE FROM SC WHERE C#='C2')",
+        "SELECT S# FROM SC WHERE C#='C2' AND GRADE IN(SELECT GRADE FROM SC WHERE C#='C2')",
+        "SELECT S# FROM SC WHERE C#='C2' AND GRADE NOT IN(SELECT GRADE FROM SC WHERE C#='C2')",
+        "SELECT S# FROM SC WHERE C#='C2' AND GRADE>=ALL(SELECT GRADE FROM SC WHERE C#='C2')"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。先用 GRADE>=ALL(同课程成绩) 找出 C2 的最高分，再返回对应学生学号。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单90",
+      "chapter": 6,
+      "number": 90,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "现有学生表S、课程表C和学生选课表SC，它们的关系模式如下。\nS(S#,SN,SEX,AGE,DEPT)(学号,姓名,性别,年龄,系别)；\nC(C#,CN)(课程号,课程名称)；\nSC(S#,C#,GRADE)(学号,课程号,成绩)。\n检索所有比“王华”年龄大的学生姓名、年龄和性别。下面正确的SELECT语句是（ ）。",
+      "options": [
+        "SELECT SN,AGE,SEX FROM S WHERE AGE>(SELECT AGE FROM S WHERE SN='王华')",
+        "SELECT SN,AGE,SEX FROM S WHERE SN='王华'",
+        "SELECT SN,AGE,SEX FROM S WHERE AGE>(SELECT AGE WHERE SN='王华')",
+        "SELECT SN,AGE,SEX FROM S WHERE SGE>'王华'.AGE"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。标量子查询先求王华年龄，外层筛选 AGE 更大的学生。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单91",
+      "chapter": 6,
+      "number": 91,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在SQL语言中，子查询是（ ）。",
+      "options": [
+        "返回单表中数据子集的查询语句",
+        "选取多表中字段子集的查询语句",
+        "选取单表中字段子集的查询语句",
+        "嵌入到另一个查询语句之中的查询语句"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。子查询是嵌入另一个查询中的 SELECT，可作为标量、集合、派生表或 EXISTS 条件。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单92",
+      "chapter": 3,
+      "number": 92,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "如下面的数据库的表所示，若职工表的主关键字是职工号，部门表的主关键字是部门号，SQL操作（ ）不能执行。",
+      "options": [
+        "从职工表中删除行('025'，'王芳'，'03'，7200)",
+        "将行('005'，'乔兴'， '04'，7200)插入到职工表中",
+        "将职工号为'001'的工资改为7000",
+        "将职工号为'038'的部门号改为'03'"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。职工号 005 已存在，插入新行会违反主键唯一性，因此该操作不能执行。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单93",
+      "chapter": 3,
+      "number": 93,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "若用如下的SQL语句创建了一个表SC：\nCREATE TABLE SC\n（S# CHAR（6） NOT NULL，\nC# CHAR（3） NOT NULL，\nSCORE INTEGER，\nNOTE CHAR（20））；\n向SC表插入如下行时，（ ）行可以被插入 。",
+      "options": [
+        "('201009','111',60)",
+        "('200823','101',NULL,NULL)",
+        "(NULL,'103',80,'选修')",
+        "('201132',NULL,86,' ')"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。只有 B 的列数正确且两个 NOT NULL 列都提供了非空值；其他选项缺列或违反非空约束。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单94",
+      "chapter": 3,
+      "number": 94,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "若用如下的SQL语句创建一个STUDENT表。\nCREATE TABLE STUDENT\n(NO char(4) NOT NULL,\nNAME char(8) NOT NULL,\nSEX char(2),\nAGE int)\n可以插入到STUDENT表中的是（ ）。",
+      "options": [
+        "(1031,'曾华','男',23)",
+        "('1031','曾华',NULL,NULL)",
+        "(NULL,'曾华','男','23')",
+        "('1031',NULL,'男',23)"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。NO 与 NAME 为 NOT NULL；B 提供非空值，允许其他可空字段为 NULL。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单95",
+      "chapter": 3,
+      "number": 95,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "设关系数据库中一个表S的结构为S（SN，CN，grade），其中SN为学生名，CN为课程名，二者均为字符型；grade为成绩，数值型，取值范围0－100。若要把“张二的化学成绩80分”插入S中，则可用（ ）。",
+      "options": [
+        "ADD INTO S VALUES（'张二','化学','80'）",
+        "INSERT INTO S VALUES（'张二','化学','80'）",
+        "ADD INTO S VALUES（'张二','化学',80）",
+        "INSERT INTO S VALUES（'张二','化学',80）"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。插入整行使用 INSERT INTO ... VALUES；字符串加引号，数值成绩不加引号。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单96",
+      "chapter": 3,
+      "number": 96,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "设关系数据库中有一个表S的关系模式为S(SN,CN,GRADE)，其中SN为学生名，CN为课程名，二者为字符型；GRADE为成绩，数值型，取值范围0～100。若要更正“王二”的化学成绩为85分，则可用（ ）。",
+      "options": [
+        "UPDATE S SET GRADE=85 WHERE SN='王二' AND CN='化学'",
+        "UPDATE S SET GRADE='85' WHERE SN='王二' AND CN='化学'",
+        "UPDATE GRADE=85 WHERE SN='王二' AND CN='化学'",
+        "UPDATE GRADE='85' WHERE SN='王二' AND CN='化学'"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。修改数据使用 UPDATE ... SET ... WHERE；成绩为数值类型，应赋值为 85。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单97",
+      "chapter": 3,
+      "number": 97,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "SQL语言的数据操作语句包括SELECT、INSERT、UPDATE和DELETE等。其中最重要的，也是使用最频繁的语句是（ ）。",
+      "options": [
+        "SELECT",
+        "INSERT",
+        "UPDATE",
+        "DELETE"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。SELECT 是查询语句，也是最常用、最重要的 SQL 数据操作语句。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单98",
+      "chapter": 3,
+      "number": 98,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "SQL语言集数据查询、数据操纵、数据定义和数据控制功能于一体，其中，CREATE、DROP、ALTER语句是实现哪种功能（ ）。",
+      "options": [
+        "数据查询",
+        "数据操纵",
+        "数据定义",
+        "数据控制"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。CREATE、DROP、ALTER 属于 DDL，用于定义和修改数据库对象。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单99",
+      "chapter": 7,
+      "number": 99,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "创建索引的主要目的是（ ）。",
+      "options": [
+        "提高查询和存取速度",
+        "增加存储空间",
+        "保证所有字段非空",
+        "自动消除数据冗余"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。索引的主要目的是加快数据定位和查询速度，但会增加存储和更新维护成本。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单100",
+      "chapter": 7,
+      "number": 100,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "为了使索引键的值在基本表中唯一，在创建索引的语句中应使用保留字（ ）。",
+      "options": [
+        "UNIQUE",
+        "COUNT",
+        "DISTINCT",
+        "UNION"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。CREATE UNIQUE INDEX 使用 UNIQUE 保证索引键值不重复。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单101",
+      "chapter": 7,
+      "number": 101,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "为了提高特定查询的速度，对SC(S#, C#, DEGREE)关系创建唯一性索引，应该创建在哪一个(组)属性上？（ ）",
+      "options": [
+        "(S#, C#)",
+        "(S#, DEGREE)",
+        "(C#, DEGREE)",
+        "DEGREE"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。SC 的业务唯一性由学号和课程号共同决定，因此唯一索引应建在 (S#, C#)。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单102",
+      "chapter": 7,
+      "number": 102,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下列关于SQL语言中索引(Index)的叙述中，哪一条是不正确的？（ ）",
+      "options": [
+        "索引是外模式",
+        "一个基本表上可以创建多个索引",
+        "索引可以加快查询的执行速度",
+        "系统在存取数据时会自动选择合适的索引作为存取路径"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。索引是物理存取结构，不是外模式；外模式通常由视图等用户视图体现。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单103",
+      "chapter": 7,
+      "number": 103,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下列几种情况下，不适合创建索引的是（ ）。",
+      "options": [
+        "列的取值范围很少",
+        "用作查询条件的列",
+        "频繁搜索范围的列",
+        "连接中频繁使用的列"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。取值很少的低选择性列区分度差，通常不适合单独创建索引。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单104",
+      "chapter": 7,
+      "number": 104,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "关于视图下列哪一个说法是错误的（ ）。",
+      "options": [
+        "视图是一种虚拟表",
+        "视图中保存一份完整的数据副本",
+        "视图可由视图派生",
+        "视图在数据库中保存的是 SELECT 查询定义"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。视图是虚表，通常只保存查询定义而不直接保存数据。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单105",
+      "chapter": 7,
+      "number": 105,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "设S_AVG(SNO,AVG_GRADE)是一个基于关系SC定义的学号和他的平均成绩的视图。下面对该视图的操作语句中，（ ）是不能正确执行的。\nⅠ.UPDATE S_AVG SET AVG_GRADE=90 WHERE SNO=2004010601\nⅡ.SELECT SNO, AVG_GRADE FROM S_AVG WHERE SNO=2004010601",
+      "options": [
+        "仅Ⅰ",
+        "仅Ⅱ",
+        "都能",
+        "都不能"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。S_AVG 含聚合结果，不能直接通过 UPDATE 修改 AVG_GRADE；查询操作正常。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单106",
+      "chapter": 7,
+      "number": 106,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "视图是一个“虚表”，视图的构造基于（ ）。\nⅠ．基本表 Ⅱ．视图 Ⅲ．索引",
+      "options": [
+        "I 或II",
+        "I或Ⅲ",
+        "Ⅱ或Ⅲ",
+        "Ⅰ、Ⅱ或Ⅲ"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。视图可以建立在一个或多个基本表上，也可以建立在其他视图上。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单107",
+      "chapter": 7,
+      "number": 107,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下面关于关系数据库视图的描述不正确的是（ ）。",
+      "options": [
+        "视图是关系数据库三级模式中的内模式",
+        "视图能够对机密数据提供安全保护",
+        "视图对重构数据库提供了一定程度的逻辑独立性",
+        "对视图的一切操作最终要转换为对其基本表的操作"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。视图对应外模式，不是内模式；它可简化查询并提高一定逻辑独立性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单108",
+      "chapter": 7,
+      "number": 108,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "以下关于视图的描述，错误的是（ ）。",
+      "options": [
+        "视图是从一个或几个基本表或视图导出的虚表",
+        "视图并不实际存储数据，只在数据字典中保存其逻辑定义",
+        "视图里面的任何数据不可以进行修改",
+        "SQL中的SELECT语句可以像对基表一样，对视图进行查询"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。简单视图在满足条件时可以更新，复杂视图通常只读，因此“任何数据都不可修改”错误。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单109",
+      "chapter": 7,
+      "number": 109,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在SQL语言中，删除一个视图的命令是（ ）。",
+      "options": [
+        "DELETE",
+        "DROP",
+        "CLEAR",
+        "REMOVE"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。删除视图使用 DROP VIEW；DELETE 删除表中数据。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单110",
+      "chapter": 7,
+      "number": 110,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在关系数据库中，视图(view)是三级模式结构中的（ ）。",
+      "options": [
+        "内模式",
+        "模式",
+        "存储模式",
+        "外模式"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。视图面向用户，通常对应三级模式结构中的外模式。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单111",
+      "chapter": 7,
+      "number": 111,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在关系数据库中，为了简化用户的查询操作，而又不增加数据的存储空间，则应该创建的数据库对象是（ ）。",
+      "options": [
+        "table(表)",
+        "index(索引)",
+        "cursor(游标)",
+        "view(视图)"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。视图不增加实际数据存储空间，却能封装复杂查询并简化用户操作。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单112",
+      "chapter": 7,
+      "number": 112,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在视图上不能完成的操作是（ ）。",
+      "options": [
+        "更新视图数据",
+        "查询",
+        "在视图上定义新的基本表",
+        "在视图上定义新视图"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。基本表是独立数据库对象，不能在视图上定义新的基本表；视图可查询、有限更新或再定义视图。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单113",
+      "chapter": 11,
+      "number": 113,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "下面选项中不属于存储过程的优点的是（ ）。",
+      "options": [
+        "增强代码的重用性和共享性",
+        "可以运行加快速度，减少网络流量",
+        "可以作为安全性机制",
+        "编辑简单"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。存储过程可复用、减少网络传输并作为权限控制边界；“编辑简单”不是其普遍优点。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单114",
+      "chapter": 1,
+      "number": 114,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "“一个事务对数据库的所有操作，是一个不可分割的工作单元，这些操作要么全部执行要么什么也不做”，这是事务的（ ）。",
+      "options": [
+        "原子性",
+        "一致性",
+        "隔离性",
+        "持久性"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。事务的原子性要求事务中的操作要么全部提交，要么全部回滚。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单115",
+      "chapter": 1,
+      "number": 115,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "若事务T对数据R已经加了X锁，则其他事务对数据R（ ）。",
+      "options": [
+        "可以加S锁不能加X锁",
+        "不能加S锁可以加X锁",
+        "可以加S锁也可以加X锁",
+        "不能加任何锁"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。X 锁是排他锁，已在数据 R 上加 X 锁后，其他事务不能再加 S 锁或 X 锁。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单116",
+      "chapter": 1,
+      "number": 116,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "并发操作会带来哪些数据不一致性？（ ）",
+      "options": [
+        "丢失更新、不可重复读、“脏”读、死锁",
+        "不可重复读、“脏”读、死锁",
+        "丢失更新、不可重复读、“脏”读",
+        "丢失更新、不可重复读、死锁"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。并发控制主要防止丢失更新、不可重复读和脏读；死锁是并发控制的副作用之一，不是数据不一致类型。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单117",
+      "chapter": 12,
+      "number": 117,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "触发器的类型有三种，下面哪一种是错误的触发器类型。（ ）",
+      "options": [
+        "UPDATE",
+        "DELETE",
+        "ALTER",
+        "INSERT"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。常见 DML 触发器类型是 INSERT、UPDATE、DELETE，ALTER 不是触发器事件。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单118",
+      "chapter": 12,
+      "number": 118,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "触发器可以创建在（ ）中。",
+      "options": [
+        "表",
+        "过程",
+        "数据过程",
+        "函数"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。触发器绑定在表上，由该表的 INSERT、UPDATE 或 DELETE 操作自动触发。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单119",
+      "chapter": 12,
+      "number": 119,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "使用（ ）语句删除触发器trig_Test。",
+      "options": [
+        "DROP * FROM trig_Test",
+        "DROP trig_Tes",
+        "DROP TRIGGER WHERE NAME=‘trig_Test’",
+        "DROP TRIGGER trig_Test"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。删除触发器使用 DROP TRIGGER 触发器名。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单120",
+      "chapter": 12,
+      "number": 120,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "一个触发器能定义在多少个表中？（ ）",
+      "options": [
+        "只有一个",
+        "一个或者多个",
+        "一个到三个",
+        "任意多个"
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "正确答案：A。一个触发器定义只能绑定一个表或视图，不能同时定义在多个表中。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单121",
+      "chapter": 12,
+      "number": 121,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在一个表上可以有（ ）种不同类型的触发器。",
+      "options": [
+        "一种",
+        "两种",
+        "三种",
+        "无限制"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。同一张表可分别定义 INSERT、UPDATE、DELETE 三类触发器。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单122",
+      "chapter": 14,
+      "number": 122,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "要想移除账户，应使用（ ）语句。",
+      "options": [
+        "DELETE USER",
+        "DROP USER",
+        "DELETE PRIV",
+        "DROP PRIV"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。删除数据库账户使用 DROP USER；DELETE 是删除表中数据的 DML 语句。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单123",
+      "chapter": 2,
+      "number": 123,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "数据的完整性是指（ ）。",
+      "options": [
+        "数据的存储和使用数据的程序无关",
+        "防止数据被非法使用",
+        "数据的正确性、一致性",
+        "减少重复数据"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。数据库完整性要求数据正确、有效并保持相容，通常由实体、参照和用户定义完整性共同保证。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单124",
+      "chapter": 14,
+      "number": 124,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "使用SELECT将表中数据导出到文件，可以使用哪一子句？（ ）。",
+      "options": [
+        "TO FILE",
+        "INTO FILE",
+        "OUTTO FILE",
+        "INTO OUTFILE"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。MySQL 使用 SELECT ... INTO OUTFILE 将查询结果导出到服务器文件。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单125",
+      "chapter": 2,
+      "number": 125,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "设属性A是关系R的主属性，则属性A不能取空值(NULL)，这是（ ）。",
+      "options": [
+        "参照完整性规则",
+        "用户定义完整性规则",
+        "关系完整性规则",
+        "实体完整性规则"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。主属性不能取空值属于实体完整性，用于保证主键能够唯一标识元组。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单126",
+      "chapter": 1,
+      "number": 126,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "设关系R和S的元组个数分别为100和300，关系T是R与S的笛卡儿积，则T的元组个数为（ ）。",
+      "options": [
+        "400",
+        "10000",
+        "30000",
+        "90000"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。笛卡尔积元组数为两关系元组数之积，即 100×300=30000。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单127",
+      "chapter": 1,
+      "number": 127,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "以下不属于结构数据模型的是（ ）。",
+      "options": [
+        "关系模型",
+        "链状模型",
+        "网状模型",
+        "层次模型"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。结构化数据模型包括层次、网状和关系模型；“链状模型”不是常见结构数据模型。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单128",
+      "chapter": 1,
+      "number": 128,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在关系R中，属性A不是主键，而是另一个关系S的主键，则在R中，属性A是（ ）。",
+      "options": [
+        "R的候选键",
+        "R的外键",
+        "S的候选键",
+        "S的外键"
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "正确答案：B。属性 A 在 R 中不是本关系主键，却引用 S 的主键，因此 A 是 R 的外键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单129",
+      "chapter": 3,
+      "number": 129,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "SQL语言又称为（ ）。",
+      "options": [
+        "结构化定义语言",
+        "结构化控制语言",
+        "结构化查询语言",
+        "结构化操纵语言"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。SQL 的英文全称是 Structured Query Language，即结构化查询语言。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单130",
+      "chapter": 3,
+      "number": 130,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "在MySQL中，通常用来指定一个已有数据库作为当前数据库的语句是（ ）。",
+      "options": [
+        "USING",
+        "USED",
+        "USE",
+        "USER"
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "正确答案：C。USE 数据库名 用于切换当前数据库。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "单131",
+      "chapter": 7,
+      "number": 131,
+      "kind": "choice",
+      "typeName": "单项选择",
+      "stem": "不可对视图执行的操作有（ ）。",
+      "options": [
+        "SELECT",
+        "INSERT",
+        "DELETE",
+        "CREATE INDEX"
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "正确答案：D。视图是虚表，普通视图不能创建索引；其余查询、有限更新和删除通常可按视图规则执行。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判1",
+      "chapter": 1,
+      "number": 1,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "关系必须有唯一的候选键。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。一个关系可以有多个候选键，但主键只能从候选键中选定一个。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判2",
+      "chapter": 1,
+      "number": 2,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "现实世界中客观存在并能相互区别的事物称为属性。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。客观存在并能相互区别的事物是实体；属性用于描述实体特征。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判3",
+      "chapter": 1,
+      "number": 3,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "关系中不同的属性可来自同一个域。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。不同属性可以来自同一个域，例如姓名和课程名都可以使用字符型域。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判4",
+      "chapter": 1,
+      "number": 4,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "关系中每一列的分量必须是同类型的数据。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。关系的每一列必须同质，同一列中的分量属于同一域并具有相同类型。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判5",
+      "chapter": 1,
+      "number": 5,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "任何一个关系模式一定有候选键。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。有限关系总能找到能够唯一确定全部属性的最小属性组，因此至少存在一个候选键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判6",
+      "chapter": 1,
+      "number": 6,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "如果在一个关系中，存在多个属性(或属性组)都能用来唯一标识该关系的元组，且其任何子集都不具有这一特性，则这些属性(或属性组)被称为该关系的候选键，简称为键。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。候选键必须能唯一标识元组且满足极小性，简称键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判7",
+      "chapter": 1,
+      "number": 7,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "如果在一个关系中，存在多个属性(或属性组)都能用来唯一标识该关系的元组，且其任何子集都不具有这一特性，则这些属性(或属性组)被称为该关系的外键。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。能唯一标识本关系元组且满足极小性的属性组是候选键，不是外键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判8",
+      "chapter": 8,
+      "number": 8,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "E-R图是用来表示关系模型的图形。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。E-R 图表示概念模型中的实体、属性和联系，不表示关系模型的二维表结构。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判9",
+      "chapter": 1,
+      "number": 9,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "一个关系中可以有两个完全相同的元组。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。关系是元组集合，不允许出现两个完全相同的元组。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判10",
+      "chapter": 1,
+      "number": 10,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "三级模式和两级映像提高了数据库系统的数据独立性。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。三级模式与两级映像提高了数据独立性，用户和应用程序不必了解底层存储细节。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判11",
+      "chapter": 2,
+      "number": 11,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库的完整性是指数据库中的数据的全面性。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。数据库完整性不只指数据的“全面性”，而是要求数据正确、有效并满足完整性约束。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判12",
+      "chapter": 2,
+      "number": 12,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库完整性要求数据正确并保持相容。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。数据库完整性要求数据正确并保持相容，通常由实体、参照和用户定义完整性共同保证。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判13",
+      "chapter": 2,
+      "number": 13,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "实体完整性和参照完整性是关系模型必须满足的完整性约束条件，称为两个不变性。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。实体完整性和参照完整性是关系模型必须满足的两个不变性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判14",
+      "chapter": 1,
+      "number": 14,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据独立性表示数据结构变化时尽量不修改应用程序。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。数据独立性表示数据结构变化时尽量不修改应用程序，分为逻辑独立性和物理独立性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判15",
+      "chapter": 1,
+      "number": 15,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "关系代数的运算对象是关系，运算结果也为关系。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。关系代数以关系为运算对象，运算结果仍是关系，因此具有封闭性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判16",
+      "chapter": 1,
+      "number": 16,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "关系代数中的选择运算是从行的角度进行运算，而投影运算是从列的角度进行运算。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。选择按行筛选，投影按列选取，这是关系代数中最基本的两个专门运算。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判17",
+      "chapter": 1,
+      "number": 17,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "DBS是采用了数据库技术的计算机系统。DBS是一个集合体，包含计算机硬件、DB、DBMS、数据库应用系统等软件和用户。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。DBS 是引入数据库后的计算机系统，包含硬件、数据库、DBMS、应用、人员和规范。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判18",
+      "chapter": 1,
+      "number": 18,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "ORACLE是大型数据库管理系统。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。Oracle 是常见的大型关系数据库管理系统，支持事务、高并发和企业级管理。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判19",
+      "chapter": 1,
+      "number": 19,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库管理系统DBMS是操作系统的一部分。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。DBMS 是位于用户和操作系统之间的系统软件，不是操作系统的一部分。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判20",
+      "chapter": 1,
+      "number": 20,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库管理员的缩写为DBA。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。数据库管理员的英文缩写是 DBA。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判21",
+      "chapter": 1,
+      "number": 21,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库管理员的缩写为DMA。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。DBA 表示数据库管理员；DMA 不是该概念的标准缩写。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判22",
+      "chapter": 1,
+      "number": 22,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库是数据库系统的核心。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。DBMS 是数据库系统的核心，负责定义、操纵、控制、维护和恢复数据库。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判23",
+      "chapter": 1,
+      "number": 23,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库系统避免了一切冗余。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。数据库系统减少并控制冗余，但不可能也没有必要避免一切冗余。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判24",
+      "chapter": 1,
+      "number": 24,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库只存储业务数据，不保存元数据、索引和日志。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。数据库还保存元数据、索引、视图定义、日志和权限信息，不只是业务数据本身。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判25",
+      "chapter": 1,
+      "number": 25,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库中的数据可以共享。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。数据库中的数据可被多个用户和应用共享，是数据库系统的重要特点。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判26",
+      "chapter": 1,
+      "number": 26,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "当数据库的内模式发生改变时，用户编写的应用程序必须随之改变。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。内模式变化可通过模式/内模式映像维持概念模式不变，应用程序通常无需修改。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判27",
+      "chapter": 1,
+      "number": 27,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "一个应用可以使用多个外模式，同一外模式也可被多个应用使用。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。一个应用可使用多个外模式，同一外模式也可被多个应用或用户使用。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判28",
+      "chapter": 1,
+      "number": 28,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "三级模式和两级映像的主要作用是提高数据独立性。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。三级模式与两级映像的主要作用是屏蔽结构变化，提高数据库的数据独立性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判29",
+      "chapter": 1,
+      "number": 29,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "外模式/模式映像保证逻辑独立性。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。外模式/模式映像保证逻辑独立性，使概念模式变化时外模式和应用程序尽量不变。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判30",
+      "chapter": 1,
+      "number": 30,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "内模式改变时，可通过调整模式/内模式映像保持概念模式不变。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。内模式改变时，可通过调整模式/内模式映像保持概念模式不变，从而保证物理独立性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判31",
+      "chapter": 1,
+      "number": 31,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在数据库的三级模式结构中，模式是描述数据库中数据的全局逻辑结构的。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。模式也称概念模式，描述数据库中全体数据的全局逻辑结构。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判32",
+      "chapter": 8,
+      "number": 32,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库的概念结构设计只能采用自顶向下或自底向上的方法。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。概念结构设计可采用自顶向下、自底向上、逐步扩张和混合策略等，不只两种。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判33",
+      "chapter": 1,
+      "number": 33,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在数据库的三级模式结构中，外模式是描述数据库中数据的全局逻辑结构的。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。外模式描述用户可见的局部逻辑结构；描述全局逻辑结构的是模式。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判34",
+      "chapter": 8,
+      "number": 34,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "E-R图在需求分析阶段生成。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。E-R 图在概念结构设计阶段产生，不在需求分析阶段直接生成。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判35",
+      "chapter": 2,
+      "number": 35,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "关系模式存取方法的选择是其物理设计阶段的任务。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。存取方法和存储结构的选择属于物理结构设计。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判36",
+      "chapter": 8,
+      "number": 36,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "命名冲突属于局部概念模式间的冲突。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。同一对象在不同局部 E-R 图中使用不同名称或同名异义，属于命名冲突。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判37",
+      "chapter": 8,
+      "number": 37,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "值域冲突属于局部概念模式间的冲突。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。同一属性在不同局部模型中的域、类型或单位不同，属于属性冲突中的值域冲突。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判38",
+      "chapter": 10,
+      "number": 38,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "若R.A→R.B，R.B→R.C, 则R. A→R.C。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。函数依赖具有传递性：若 A→B 且 B→C，则 A→C。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判39",
+      "chapter": 2,
+      "number": 39,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库设计完成即可以交付用户使用，不需要进行试运行。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。数据库设计完成后还需实施、试运行、测试和评估，不能直接跳过试运行交付。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判40",
+      "chapter": 3,
+      "number": 40,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据定义语言的缩写为DML。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。数据定义语言缩写为 DDL；DML 是数据操纵语言。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判41",
+      "chapter": 3,
+      "number": 41,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在MySQL5.5以上系统中，默认的存储引擎是InnoDB。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。MySQL 5.5 起默认存储引擎为 InnoDB，支持事务、行锁和外键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判42",
+      "chapter": 3,
+      "number": 42,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在创建数据库时，每个数据库都对应存放在一个与数据库同名的文件夹中。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。在 MySQL 数据目录中，每个数据库通常对应一个同名文件夹。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判43",
+      "chapter": 3,
+      "number": 43,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在创建表时，不能为其某个字段指定默认值。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。创建表时可以使用 DEFAULT 为字段指定默认值。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判44",
+      "chapter": 3,
+      "number": 44,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在创建表时，可以设定某个字段的取值允许为空值（NULL)。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。字段默认允许 NULL，使用 NOT NULL 可以禁止空值。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判45",
+      "chapter": 3,
+      "number": 45,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在创建表时，指定某字段为主键的关键字是FOREIGN KEY。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。指定主键使用 PRIMARY KEY；FOREIGN KEY 用于定义外键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判46",
+      "chapter": 3,
+      "number": 46,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在MySQL中，一旦某个表创建完成，它的结构就不能再更改。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。表结构创建后可通过 ALTER TABLE 增加、修改或删除列及约束。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判47",
+      "chapter": 3,
+      "number": 47,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "DROP TABLE 和 TRUNCATE TABLE 的作用相同。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。DROP TABLE 删除表结构和数据；TRUNCATE TABLE 只清空数据并保留表结构。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判48",
+      "chapter": 3,
+      "number": 48,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在MySQL表中执行删除操作时，可以删除指定的记录，也可以删除表中所有的记录。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。DELETE 可配合 WHERE 删除指定行，省略 WHERE 时删除所有行。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判49",
+      "chapter": 3,
+      "number": 49,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "创建唯一性索引的列可以有一些重复的值。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。唯一索引要求索引键在非空值上不能重复，只允许按 DBMS 规则处理 NULL。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判50",
+      "chapter": 7,
+      "number": 50,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在数据库中建立的索引越多越好。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。索引会增加存储和维护成本，过多索引会拖慢插入、更新和删除。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判51",
+      "chapter": 7,
+      "number": 51,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在一个基本表上可以创建多个索引。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。一个基本表可以建立多个普通、唯一或复合索引。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判52",
+      "chapter": 7,
+      "number": 52,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在MySQL中，若一个表中的某个字段的取值范围很少，则该列不适合创建索引。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。取值很少的列选择性低，索引区分度不足，通常不适合单独建立索引。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判53",
+      "chapter": 7,
+      "number": 53,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "SQL语言的视图定义和视图操作功能在一定程度上支持了数据的逻辑独立性。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。视图可隐藏基表结构变化，在一定程度上提高逻辑独立性和安全性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判54",
+      "chapter": 7,
+      "number": 54,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "视图本身没有保存数据，而是保存一条查询语句。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。普通视图通常只保存查询定义，查询时再从基本表产生结果。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判55",
+      "chapter": 7,
+      "number": 55,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "视图和表是完全一样的。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。视图是虚表，基本表实际存储数据，两者在存储和更新规则上不同。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判56",
+      "chapter": 7,
+      "number": 56,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "因为通过视图可以插入、修改或删除数据，因此视图也是一个实在表。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。部分视图可以更新，但更新最终作用于基本表，视图本身不是实在表。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判57",
+      "chapter": 7,
+      "number": 57,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在关系数据库中，视图是三级模式中的外模式。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。视图面向具体用户，通常对应三级模式结构中的外模式。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判58",
+      "chapter": 7,
+      "number": 58,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "在MySQL中，删除一个视图所用的命令是DELETE。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。MySQL 删除视图使用 DROP VIEW；DELETE 删除表中数据。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判59",
+      "chapter": 1,
+      "number": 59,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "事务在MySQL中相当于一个工作单元，也就是一条SQL语句。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。事务可以由多条 SQL 组成，是逻辑工作单元，不等于一条 SQL。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判60",
+      "chapter": 1,
+      "number": 60,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "事务是并发控制的基本单位。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。事务是并发控制和恢复的基本单位。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判61",
+      "chapter": 1,
+      "number": 61,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "两个或两个以上的事务分别申请封锁对方已经封锁的数据对象，导致长期等等待而无法继续运行下去的现象称为活锁。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。两个事务互相等待对方已封锁的数据对象属于死锁；活锁是事务长期得不到调度。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判62",
+      "chapter": 1,
+      "number": 62,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "事务的开始与结束可以由用户显式地控制，也可以由DBMS按照默认规则自动划分。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。事务边界可由用户显式控制，也可由 DBMS 按自动提交等默认规则划分。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判63",
+      "chapter": 1,
+      "number": 63,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "事务的原子性是指事务在执行时，应该遵守“要么全做，要么全不做”的原则，即不允许事务部分地完成。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。原子性要求事务中的操作要么全部生效，要么全部撤销。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判64",
+      "chapter": 1,
+      "number": 64,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "当同一数据库系统中有多个事务并发运行时，如果不加以适当控制，就可能产生数据的不一致性问题。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。并发事务若缺少适当隔离控制，会出现脏读、不可重复读或丢失更新。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判65",
+      "chapter": 12,
+      "number": 65,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "MySQL 触发器只能在 DML 操作之前执行。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。MySQL 支持 BEFORE 和 AFTER 触发器，并非只能在 DML 操作之前执行。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判66",
+      "chapter": 12,
+      "number": 66,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库触发器是计算机硬件。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。触发器是存储在数据库中的程序对象，不是计算机硬件。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判67",
+      "chapter": 12,
+      "number": 67,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "触发器像存储过程一样必须由用户显式调用。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。触发器由对应 DML 事件自动执行，不需要像存储过程那样显式调用。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判68",
+      "chapter": 12,
+      "number": 68,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "触发器执行出错时，原始 DML 语句通常会被取消或回滚。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。触发器执行出错时，数据库通常会取消或回滚触发它的 DML 语句。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判69",
+      "chapter": 12,
+      "number": 69,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "触发器主要是通过表操作事件进行触发而被执行的。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。触发器主要绑定 INSERT、UPDATE、DELETE 等表操作事件并自动执行。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判70",
+      "chapter": 12,
+      "number": 70,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "删除表时，表中的触发器不被同时删除。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。表被删除时，其上的触发器通常随表一起删除。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判71",
+      "chapter": 12,
+      "number": 71,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "视图具有与表相同的功能，在视图上也可以创建触发器。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。MySQL 触发器只能定义在基本表上，不能定义在普通视图上。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判72",
+      "chapter": 14,
+      "number": 72,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "MySQL的访问控制分为连接核实和请求核实两个阶段。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。MySQL 访问控制通常分为连接核实和请求核实两个阶段。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判73",
+      "chapter": 14,
+      "number": 73,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "当某用户试图连接MySQL服务器进行查询操作时，如果不能通过身份验证，该用户仍然可以进行查询操作。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。用户必须通过身份验证并具备相应权限，才能连接和执行查询。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判74",
+      "chapter": 14,
+      "number": 74,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "为用户授权时只能授予全局权限，不能授予数据库权限。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。MySQL 可授予全局、数据库、表、列和存储程序等不同级权限。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判75",
+      "chapter": 14,
+      "number": 75,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "要想在MySQL中创建新的用户，必须有相应的操作权限。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。创建用户需要 CREATE USER 权限或等价的账户管理权限。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判76",
+      "chapter": 14,
+      "number": 76,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "已授权给某用户的权限不能收回。",
+      "options": [],
+      "answer": "错",
+      "explanation": "答案：错。已授予的权限可以使用 REVOKE 收回。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判77",
+      "chapter": 14,
+      "number": 77,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据库恢复可以利用备份并结合日志完成。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。数据库恢复可以利用备份并结合日志把数据库恢复到一致状态。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判78",
+      "chapter": 14,
+      "number": 78,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据备份就是制作数据库结构、对象和数据的复制，以便在数据库遭到破坏时可以恢复数据库。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。备份是复制数据库结构、对象和数据，以便故障后恢复。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判79",
+      "chapter": 14,
+      "number": 79,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "数据恢复就是当数据库出现故障时，将备份的数据库加载到系统，使数据库恢复到备份时的正确状态。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。恢复是在故障后加载备份并重做或撤销日志，使数据库回到一致状态。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "判80",
+      "chapter": 14,
+      "number": 80,
+      "kind": "judge",
+      "typeName": "判断",
+      "stem": "当数据库遭到意外损坏时，可以通过日志文件查询出错原因，还可以通过日志文件进行数据恢复。",
+      "options": [],
+      "answer": "对",
+      "explanation": "答案：对。日志可用于审计和故障分析，也可配合备份进行重做或撤销恢复。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合1",
+      "chapter": 13,
+      "number": 1,
+      "kind": "open",
+      "typeName": "数据库设计综合题",
+      "stem": "某大学实行学分制：每名学生可选修多门课程，每门课程可由多位教师讲授，每位教师也可讲授多门课程。\n\n学生属性：学号、姓名、性别、年龄、班级。\n课程属性：课程号、课程名。\n教师属性：教师号、教师姓名、所属系别、职称。\n选课联系属性：学期、成绩。\n\n要求：\n1. 判断学生与课程、课程与教师分别是什么联系类型。\n2. 写出关系模式，标明主键和外键。",
+      "options": [],
+      "answer": "```text\n学生(学号 PK, 姓名, 性别, 年龄, 班级)\n课程(课程号 PK, 课程名)\n教师(教师号 PK, 教师姓名, 所属系别, 职称)\n选课(学号 PK/FK, 课程号 PK/FK, 学期, 成绩)\n讲授(课程号 PK/FK, 教师号 PK/FK)\n```",
+      "explanation": "学生与课程、课程与教师均为 M:N 联系，都要转换为独立联系表。课程关系中不应再保存“任课教师”，否则会与讲授联系重复并造成多值问题。选课关系主键通常为（学号，课程号）；若允许同一学生同一课程重修，应把学期或修读流水号加入主键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合2",
+      "chapter": 13,
+      "number": 2,
+      "kind": "open",
+      "typeName": "数据库设计综合题",
+      "stem": "设计“医院病房管理系统”。已知：\n\n- 科室：科室名、地址、电话、主任。\n- 病房：病房号、床位号、所属科室。\n- 医生：工作证号、姓名、职称、年龄、所属科室。\n- 病人：病历号、姓名、性别、诊断、主管医生、病房号。\n- 一个科室有多个病房和多名医生，一个病房只属于一个科室，一名医生只属于一个科室。\n- 一名医生可负责多名病人，一名病人只有一个主管医生。\n\n要求写出关系模式并标明主、外键。",
+      "options": [],
+      "answer": "```text\n科室(科室名 PK, 科室地址, 科室电话, 主任工作证号 FK)\n病房(病房号 PK, 所属科室名 FK)\n床位(病房号 PK/FK, 床位号 PK)\n医生(工作证号 PK, 姓名, 职称, 年龄, 所属科室名 FK)\n病人(病历号 PK, 姓名, 性别, 诊断, 主管医生工作证号 FK, 病房号 FK)\n```",
+      "explanation": "科室与病房、科室与医生都是 1:N，因此把科室名放入病房和医生表作外键。医生的姓名不能作为科室表中的多值属性保存，应使用主任工作证号引用医生。若题目规定每个病房只有一张床，可将床位表合并进病房表；这里保留床位表以完整表达“病房—床位”。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合3",
+      "chapter": 13,
+      "number": 3,
+      "kind": "open",
+      "typeName": "数据库设计综合题",
+      "stem": "设计“订单管理系统”。已知信息包括：订单号、客户号、客户名、客户地址、产品号、产品名、产品价格、订购数量、订购日期。一个客户可以有多个订单，一个订单可以订购多种产品。\n\n要求写出关系模式并标明主、外键。",
+      "options": [],
+      "answer": "```text\n客户(客户号 PK, 客户名, 客户地址)\n订单(订单号 PK, 客户号 FK, 订购日期)\n产品(产品号 PK, 产品名, 产品价格)\n订单明细(订单号 PK/FK, 产品号 PK/FK, 订购数量)\n```",
+      "explanation": "客户与订单是 1:N，订单号放客户号外键；订单与产品是 M:N，必须建立订单明细表。订购日期属于整张订单，应放订单表而不是明细表；订购数量属于某订单中的某产品，应放订单明细表。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合4",
+      "chapter": 13,
+      "number": 4,
+      "kind": "open",
+      "typeName": "数据库设计综合题",
+      "stem": "设计网络玩具销售系统的关系模式。已知：\n\n- 客户：客户编号、姓名、性别、年龄、电话、通信地址。\n- 玩具：玩具编号、名称、类型、价格、库存数量。\n- 一个客户可以订购多种玩具，一种玩具也可被多个客户订购。\n\n要求写出关系模式并标明主、外键。",
+      "options": [],
+      "answer": "```text\n客户(客户编号 PK, 姓名, 性别, 年龄, 电话, 通信地址)\n玩具(玩具编号 PK, 名称, 类型, 价格, 库存数量)\n订购(客户编号 PK/FK, 玩具编号 PK/FK, 订购数量)\n```",
+      "explanation": "客户与玩具是 M:N，订购表以客户编号和玩具编号组成复合主键。题目没有给出订单编号，因此按“同一客户与同一玩具只保存一条当前订购记录”处理；如果允许保留多次订单，应增加订单编号或订购时间参与主键。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合5",
+      "chapter": 9,
+      "number": 5,
+      "kind": "open",
+      "typeName": "数据库设计综合题",
+      "stem": "学生 S 的属性为 S#、SNAME、AGE、SEX；课程 C 的属性为 C#、CNAME、TEACHER。S 与 C 之间为 M:N 联系，学生选修课程后取得 GRADE。\n\n请转换为关系模型并指出主键。",
+      "options": [],
+      "answer": "```text\nS(S# PK, SNAME, AGE, SEX)\nC(C# PK, CNAME, TEACHER)\nSC(S# PK/FK, C# PK/FK, GRADE)\n```",
+      "explanation": "两个实体分别转换为关系模式，M:N 选课联系转换为独立关系 SC。SC 的主键由学生主键 S# 和课程主键 C# 组合而成，GRADE 是联系属性，不属于 S 或 C 单独所有。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合6",
+      "chapter": 13,
+      "number": 6,
+      "kind": "open",
+      "typeName": "数据库设计综合题",
+      "stem": "某企业集团有若干工厂。每个工厂生产多种产品，每种产品可在多个工厂生产，并记录计划生产数量；每个工厂聘用多名职工，每名职工只能在一个工厂工作，聘用关系记录聘期和工资。\n\n实体属性：\n- 工厂：工厂编号、厂名、地址。\n- 产品：产品编号、产品名、规格。\n- 职工：职工号、姓名。\n\n要求写出关系模式并指出主键。",
+      "options": [],
+      "answer": "```text\n工厂(工厂编号 PK, 厂名, 地址)\n产品(产品编号 PK, 产品名, 规格)\n职工(职工号 PK, 姓名, 工厂编号 FK, 聘期, 工资)\n生产(工厂编号 PK/FK, 产品编号 PK/FK, 计划数量)\n```",
+      "explanation": "工厂与产品是 M:N，需建立生产联系表，主键为（工厂编号，产品编号）。工厂与职工是 1:N，且每名职工只属于一个工厂，可把工厂编号、聘期和工资并入职工关系，不必再单独建立聘用表。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合7",
+      "chapter": 10,
+      "number": 7,
+      "kind": "open",
+      "typeName": "范式判断题",
+      "stem": "判断下列关系最高满足第几范式，并说明理由：\n\n（1）职员(职员代码, 职员姓名, 部门代码, 部门负责人代码)，主键为职员代码。\n（2）项目(项目代码, 职员代码, 职员所属部门, 累计工作时间)，主键为（项目代码，职员代码）。\n（3）学生(学号, 身份证号, 姓名, 年龄, 班级号)，主键为学号，身份证号也是候选键。",
+      "options": [],
+      "answer": "（1）满足 2NF，不满足 3NF。 \n（2）最高满足 1NF，不满足 2NF。 \n（3）满足 3NF，但不一定满足 BCNF。",
+      "explanation": "（1）单属性主键不存在部分依赖，但存在职员代码→部门代码→部门负责人代码的传递依赖。（2）主键为复合键，而职员代码单独决定职员所属部门，存在部分依赖。（3）学号和身份证号都是候选键，所有属性均为主属性；3NF 的非主属性传递依赖条件不再构成违反，但身份证号→学号且身份证号是候选键，需进一步检查 BCNF。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合8",
+      "chapter": 3,
+      "number": 8,
+      "kind": "open",
+      "typeName": "SQL 应用题",
+      "stem": "根据关系 Student(Sno, Sname, Sex, Age, City, Class)，创建 Student 表，并满足：\n- Sno 为主键；\n- Sex 默认值为“男”；\n- Age 必须大于 13。",
+      "options": [],
+      "answer": "```sql\nCREATE TABLE Student (\n Sno CHAR(10) PRIMARY KEY,\n Sname VARCHAR(30) NOT NULL,\n Sex CHAR(2) DEFAULT '男',\n Age INT,\n City VARCHAR(50),\n Class VARCHAR(30),\n CONSTRAINT CK_Student_Age CHECK (Age > 13)\n);\n```",
+      "explanation": "PRIMARY KEY 同时保证学号非空且唯一；DEFAULT 指定性别默认值；CHECK 把年龄限制为大于 13。主键、默认值和检查约束分别对应实体完整性、用户定义完整性或域完整性。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合9",
+      "chapter": 3,
+      "number": 9,
+      "kind": "open",
+      "typeName": "SQL 应用题",
+      "stem": "删除 Course 表中由“李梅”老师负责授课的课程记录。Course 与 Teacher 通过 Tno 关联。",
+      "options": [],
+      "answer": "```sql\nDELETE FROM Course\nWHERE Tno IN (\n SELECT Tno\n FROM Teacher\n WHERE Tname = '李梅'\n);\n```",
+      "explanation": "先用子查询找出李梅的教师号，再删除对应课程。使用 IN 而不是 =，因为姓名不一定唯一，李梅可能对应一个或多个教师号。删除前还需考虑 SC 等子表是否引用了这些课程。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合10",
+      "chapter": 3,
+      "number": 10,
+      "kind": "open",
+      "typeName": "SQL 应用题",
+      "stem": "将选修“数据库”课程的所有成绩增加 5 分。关系为 Course(Cno,Cname,...)、SC(Sno,Cno,Score)。",
+      "options": [],
+      "answer": "```sql\nUPDATE SC\nSET Score = Score + 5\nWHERE Cno IN (\n SELECT Cno\n FROM Course\n WHERE Cname = '数据库'\n);\n```",
+      "explanation": "课程名在 Course，成绩在 SC，因此先按课程名找到课程号，再更新 SC。使用 IN 可处理同名课程对应多个课程号的情况；若业务要求加分后不超过 100，还应增加范围约束或 CASE 表达式。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合11",
+      "chapter": 6,
+      "number": 11,
+      "kind": "open",
+      "typeName": "SQL 综合题",
+      "stem": "查询考试平均成绩高于全体学生平均成绩的学生学号、姓名和平均成绩。关系为 Student(Sno,Sname,...)、SC(Sno,Cno,Score)。",
+      "options": [],
+      "answer": "```sql\nSELECT S.Sno,\n S.Sname,\n AVG(SC.Score) AS AvgScore\nFROM Student AS S\nJOIN SC ON S.Sno = SC.Sno\nGROUP BY S.Sno, S.Sname\nHAVING AVG(SC.Score) > (\n SELECT AVG(Score)\n FROM SC\n);\n```",
+      "explanation": "内层子查询计算全体选课成绩的平均值；外层按学生分组求个人平均分，并在 HAVING 中与总平均分比较。AVG 忽略 NULL，若课程成绩为 NULL 需要按业务确定统计口径。",
+      "origin": "《数据库原理及应用》总复习"
+    },
+    {
+      "reviewNo": "综合12",
+      "chapter": 6,
+      "number": 12,
+      "kind": "open",
+      "typeName": "SQL 综合题",
+      "stem": "查询与教师李梅籍贯相同的学生学号、姓名和籍贯。关系为 Student(Sno,Sname,City,...)、Teacher(Tno,Tname,City)。",
+      "options": [],
+      "answer": "```sql\nSELECT S.Sno, S.Sname, S.City\nFROM Student AS S\nJOIN Teacher AS T\n ON S.City = T.City\nWHERE T.Tname = '李梅';\n```",
+      "explanation": "按 City 相等连接学生和教师，再筛选李梅。若存在重名教师或空籍贯，应按实际业务使用教师号、去重或排除 NULL。城市相同的多个李梅会放大结果，必要时可改为 IN 子查询。",
+      "origin": "《数据库原理及应用》总复习"
+    }
+  ]
+}

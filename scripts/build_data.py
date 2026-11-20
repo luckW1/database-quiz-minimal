@@ -7,6 +7,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "source" / "question-bank.md"
+EXTRA_SOURCES = [
+    ROOT / "source" / "review-doc-questions.json",
+    ROOT / "source" / "sql-practice-questions.json",
+]
 OUTPUT = ROOT / "data.js"
 
 CHAPTER_RE = re.compile(r"^# (第([一二三四五六七八九十]+)章)\s+(.+)$")
@@ -20,6 +24,13 @@ def clean_lines(lines: list[str]) -> str:
     while lines and (not lines[-1].strip() or lines[-1].strip() == "---"):
         lines.pop()
     return "\n".join(line.rstrip() for line in lines).strip()
+
+
+def normalize_stem(value: str) -> str:
+    value = re.sub(r"^\s*\d+[、.．]\s*", "", value)
+    value = re.sub(r"```[a-zA-Z]*", "", value)
+    value = re.sub(r"[\s\u3000，。；：、,.!?！？：；（）()\[\]【】“”\"'‘’]", "", value)
+    return value.lower()
 
 
 def parse_answer(kind: str, title: str, raw: str) -> tuple[str | list[str], str]:
@@ -162,12 +173,71 @@ def build() -> None:
 
     finish_question()
 
+    if len(questions) != 240:
+        raise ValueError(f"Expected 240 base questions, found {len(questions)}")
+
+    base_questions: list[dict] = []
+    seen_stems: set[str] = set()
+    removed_base_duplicates: list[str] = []
+    for question in questions:
+        normalized = normalize_stem(question["stem"])
+        if normalized in seen_stems:
+            removed_base_duplicates.append(question["id"])
+            continue
+        seen_stems.add(normalized)
+        base_questions.append(question)
+    questions = base_questions
+    base_unique_count = len(base_questions)
+
+    skipped_duplicates = 0
+    extra_sequence = 0
+    for source_path in EXTRA_SOURCES:
+        source_data = json.loads(source_path.read_text(encoding="utf-8"))
+        for extra in source_data["questions"]:
+            extra_sequence += 1
+            normalized = normalize_stem(extra["stem"])
+            if normalized in seen_stems:
+                skipped_duplicates += 1
+                continue
+            seen_stems.add(normalized)
+            chapter_id = int(extra["chapter"])
+            chapter = chapters[chapter_id - 1]
+            question_id = f"doc-{extra_sequence:03d}"
+            questions.append(
+                {
+                    "id": question_id,
+                    "chapter": chapter_id,
+                    "chapterTitle": chapter["title"],
+                    "number": int(extra["number"]),
+                    "title": extra["typeName"],
+                    "kind": extra["kind"],
+                    "answerKind": extra["kind"],
+                    "typeName": extra["typeName"],
+                    "stem": extra["stem"].strip(),
+                    "options": extra.get("options", []),
+                    "answer": extra["answer"],
+                    "explanation": extra["explanation"].strip(),
+                    "origin": extra.get("origin", source_data["title"]),
+                }
+            )
+
+    questions.sort(
+        key=lambda question: (
+            question["chapter"],
+            0 if not question["id"].startswith("doc-") else 1,
+            question["number"],
+            question["id"],
+        )
+    )
+    for question in questions:
+        question["chapterTitle"] = chapters[question["chapter"] - 1]["title"]
+
+    for chapter in chapters:
+        chapter["count"] = 0
     for question in questions:
         chapters[question["chapter"] - 1]["count"] += 1
 
     ids = [question["id"] for question in questions]
-    if len(questions) != 240:
-        raise ValueError(f"Expected 240 questions, found {len(questions)}")
     if len(set(ids)) != len(ids):
         raise ValueError("Duplicate question IDs found")
     if len(chapters) != 14:
@@ -177,14 +247,29 @@ def build() -> None:
         kind: sum(1 for question in questions if question["kind"] == kind)
         for kind in ("choice", "judge", "open")
     }
-    if kind_counts != {"choice": 62, "judge": 35, "open": 143}:
-        raise ValueError(f"Unexpected kind counts: {kind_counts}")
+    for question in questions:
+        if question["kind"] == "choice":
+            if len(question["options"]) < 2:
+                raise ValueError(f"Choice question has too few options: {question['id']}")
+            if not isinstance(question["answer"], list) or not question["answer"]:
+                raise ValueError(f"Choice question has invalid answer: {question['id']}")
+        elif question["kind"] == "judge":
+            if question["answer"] not in {"对", "错"}:
+                raise ValueError(f"Judge question has invalid answer: {question['id']}")
+        else:
+            if not str(question["answer"]).strip():
+                raise ValueError(f"Open question has empty answer: {question['id']}")
 
     payload = {
         "meta": {
             "title": "数据库原理与应用",
             "subtitle": "专升本分章刷题",
             "total": len(questions),
+            "baseTotal": base_unique_count,
+            "baseSourceTotal": 240,
+            "baseDuplicatesRemoved": len(removed_base_duplicates),
+            "addedTotal": len(questions) - base_unique_count,
+            "skippedDuplicates": skipped_duplicates,
             "chapterCount": len(chapters),
             "kindCounts": kind_counts,
         },

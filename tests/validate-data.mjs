@@ -9,18 +9,38 @@ vm.runInNewContext(fs.readFileSync(path.join(root, "data.js"), "utf8"), sandbox)
 const data = sandbox.window.DB_QUIZ;
 
 assert.equal(data.chapters.length, 14);
-assert.equal(data.questions.length, 240);
-assert.equal(data.meta.kindCounts.choice, 62);
-assert.equal(data.meta.kindCounts.judge, 35);
-assert.equal(data.meta.kindCounts.open, 143);
+assert.equal(data.meta.total, 589);
+assert.equal(data.meta.baseTotal, 238);
+assert.equal(data.meta.baseSourceTotal, 240);
+assert.equal(data.meta.baseDuplicatesRemoved, 2);
+assert.equal(data.meta.addedTotal, 351);
+assert.equal(data.meta.kindCounts.choice, 193);
+assert.equal(data.meta.kindCounts.judge, 115);
+assert.equal(data.meta.kindCounts.open, 281);
 
 const ids = new Set();
+const stems = new Set();
+const normalize = (value) => value
+  .replace(/^\s*\d+[、.．]\s*/, "")
+  .replace(/```[a-zA-Z]*/g, "")
+  .replace(/[\s\u3000，。；：、,.!?！？：；（）()\[\]【】“”"'‘’]/g, "")
+  .toLowerCase();
 for (const question of data.questions) {
   assert.ok(!ids.has(question.id), `duplicate id: ${question.id}`);
   ids.add(question.id);
+  const normalized = normalize(question.stem);
+  assert.ok(normalized, `empty normalized stem: ${question.id}`);
+  assert.ok(!stems.has(normalized), `duplicate stem: ${question.id}`);
+  stems.add(normalized);
   assert.ok(question.stem.trim(), `missing stem: ${question.id}`);
   assert.ok(question.explanation.trim(), `missing explanation: ${question.id}`);
+  assert.ok(question.explanation.length >= 20, `explanation too short: ${question.id}`);
   assert.ok(question.answer, `missing answer: ${question.id}`);
+  for (const field of ["stem", "answer", "explanation"]) {
+    const value = String(question[field] || "");
+    const fences = (value.match(/```/g) || []).length;
+    assert.equal(fences % 2, 0, `unbalanced code fence in ${question.id}.${field}`);
+  }
   if (question.kind === "choice") {
     assert.ok(question.options.length >= 2, `missing options: ${question.id}`);
     assert.ok(question.answer.every((letter) => "ABCDEF".includes(letter)));
@@ -38,4 +58,4 @@ for (const chapter of data.chapters) {
   );
 }
 
-console.log("Data validation passed: 240 questions across 14 chapters.");
+console.log("Data validation passed: 589 unique questions across 14 chapters.");
